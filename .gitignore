@@ -1,0 +1,16 @@
+# IntelliJ
+.idea/
+*.iml
+.metadata/
+
+# Build
+out/
+target/
+build/
+
+# OS trash
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
