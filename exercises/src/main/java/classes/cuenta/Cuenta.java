@@ -1,4 +1,4 @@
-package classes;
+package classes.cuenta;
 
 public class Cuenta {
     private String titular;
@@ -11,9 +11,7 @@ public class Cuenta {
     }
 
     // Getters
-    public String getTitular() {
-        return titular;
-    }
+    public String getTitular() {return titular; }
 
     public double getSaldo() {
         return saldo;

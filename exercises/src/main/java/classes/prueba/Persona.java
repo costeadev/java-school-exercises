@@ -1,4 +1,4 @@
-package classes;
+package classes.prueba;
 
 // 1.
 public class Persona {

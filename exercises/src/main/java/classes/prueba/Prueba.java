@@ -1,4 +1,4 @@
-package classes;
+package classes.prueba;
 
 // 2.
 public class Prueba {
