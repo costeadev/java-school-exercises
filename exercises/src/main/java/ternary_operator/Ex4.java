@@ -12,15 +12,16 @@ import java.util.Scanner;
 
 public class Ex4 {
 	public static void main(String[] args) {
-		
 		Scanner scan = new Scanner(System.in);
+
+		System.out.println("--- COMPROBAR SI EL USUARIO ES MAYOR DE EDAD ---");
 		
-		System.out.print("Introduce tu edad: ");
+		System.out.print("Edad: ");
 		int edadUsuario = scan.nextInt();
-		
-		scan.close();
-		
+
 		boolean mayorDeEdad = (edadUsuario >= 18);
 		System.out.printf("Eres mayor de edad: %b", mayorDeEdad);
+
+		scan.close();
 	}
 }

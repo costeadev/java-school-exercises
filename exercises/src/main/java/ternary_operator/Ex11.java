@@ -11,15 +11,20 @@ import java.util.Scanner;
 
 public class Ex11 {
 	public static void main(String[] args) {
-		
 		Scanner scan = new Scanner(System.in);
+
+		System.out.println("--- CALCULAR AREA CIRCULO ---");
 		
 		System.out.print("Introduce el radio del círculo: ");
-		double radioCirculo = scan.nextDouble();
+		double radio = scan.nextDouble();
 		
+		double area = calcularAreaCirculo(radio);
+		System.out.printf("Area: %.2f cm²", area);
+
 		scan.close();
-		
-		double areaCirculo = Math.PI * Math.pow(radioCirculo, 2);
-		System.out.printf("El área de un círculo de %.2f cm de radio es %.2f cm2", radioCirculo, areaCirculo);
+	}
+
+	public static double calcularAreaCirculo(double radio) {
+		return Math.PI * Math.pow(radio, 2);
 	}
 }

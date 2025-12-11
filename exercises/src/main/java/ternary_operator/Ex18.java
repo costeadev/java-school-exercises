@@ -12,7 +12,6 @@ import java.util.Scanner;
 
 public class Ex18 {
 	public static void main(String[] args) {
-		
 		Scanner scan = new Scanner(System.in);
 		
 		System.out.print("Se ha aprobado la asignatura 1?: ");
@@ -20,10 +19,13 @@ public class Ex18 {
 		
 		System.out.print("Se ha aprobado la asignatura 2?: ");
 		boolean asignatura2Aprobada = scan.nextBoolean();
-		
+
+		String resultado = (asignatura1Aprobada && asignatura2Aprobada)
+				? "aprueba el curso"
+				: "repite el curso";
+
+		System.out.println("El alumno " + resultado);
+
 		scan.close();
-		
-		String apruebaORepite = asignatura1Aprobada && asignatura2Aprobada ? "aprueba el curso" : "repite el curso";
-		System.out.printf("El alumno %s", apruebaORepite);
 	}
 }

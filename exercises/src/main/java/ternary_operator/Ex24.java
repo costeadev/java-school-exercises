@@ -14,7 +14,6 @@ import java.util.Scanner;
 
 public class Ex24 {
 	public static void main(String[] args) {
-		
 		Scanner scan = new Scanner(System.in);
 		
 		System.out.print("Introduce edad 1: ");
@@ -23,18 +22,17 @@ public class Ex24 {
 		System.out.print("Introduce edad 2: ");
 		int edad2 = scan.nextInt();
 		
-		scan.close();
-		
 		boolean edadesValidas = edad1 > 0 && edad2 > 0;
 		
-		String mensaje = !edadesValidas ? "La edad no es valida":
-						 ((edad1 >= 18) && (edad2 >= 18) ||
-						  (edad1 >= 21) && (edad2 < 18) || 
-						  (edad1 < 18) && (edad2 >= 21)) 
-						   ? "pueden acceder"
-						   : "no pueden acceder"; 
+		String mensaje = !edadesValidas
+				? "La edad no es valida"
+				: ((edad1 >= 18) && (edad2 >= 18) || (edad1 >= 21) || (edad2 >= 21))
+					? "pueden acceder"
+					: "no pueden acceder";
 						     
 							
-		System.out.printf("Teniendo %d y %d años, %s",edad1, edad2, mensaje);
+		System.out.printf("Teniendo %d y %d años, %s", edad1, edad2, mensaje);
+
+		scan.close();
 	}
 }

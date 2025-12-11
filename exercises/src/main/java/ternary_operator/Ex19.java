@@ -12,23 +12,26 @@ import java.util.Scanner;
 
 public class Ex19 {
 	public static void main(String[] args) {
-		
 		Scanner scan = new Scanner(System.in);
-		
+
 		System.out.print("Nota asignatura 1: ");
-		int notaAsignatura1 = scan.nextInt();
-		
+		int nota1 = scan.nextInt();
+
 		System.out.print("Nota asignatura 2: ");
-		int notaAsignatura2 = scan.nextInt();
+		int nota2 = scan.nextInt();
 		
 		System.out.print("Nota asignatura 3: ");
-		int notaAsignatura3 = scan.nextInt();
-		
-		
+		int nota3 = scan.nextInt();
+
+		String resultado = (nota1 < 0 || nota1 > 10 || nota2 < 0 || nota2 > 10 || nota3 < 0 || nota3 > 10)
+				? "Valor no válido"
+				: (nota1 >= 5 && nota2 >= 5 && nota3 >= 5)
+					? "Aprueba"
+					: "Repite";
+
+		System.out.println(resultado);
+
 		scan.close();
-		
-		boolean valorNoValido = notaAsignatura1 < 0 || notaAsignatura1 > 10 | notaAsignatura2 < 0 || notaAsignatura2 > 10 | notaAsignatura3 < 0 || notaAsignatura3 > 10; 
-		String apruebaORepite = valorNoValido ? "Valor no válido introducido, deben ser números enteros entre 0 y 10" : notaAsignatura1 >= 5 && notaAsignatura2 >=5 && notaAsignatura3 >=5 ? "El estudiante aprueba el curso" : "El estudiante repite curso";
-		System.out.printf(apruebaORepite);
 	}
+
 }

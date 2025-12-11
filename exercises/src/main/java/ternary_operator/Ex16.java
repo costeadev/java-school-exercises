@@ -12,18 +12,22 @@ import java.util.Scanner;
 
 public class Ex16 {
 	public static void main(String[] args) {
-		
 		Scanner scan = new Scanner(System.in);
+
+		System.out.println("--- QUE ALMACÉN TIENE MÁS PRODUCTOS? ---");
 		
-		System.out.print("Introduce el total de productos en el Almacén 1: ");
+		System.out.print("Productos en Almacén 1: ");
 		int almacen1 = scan.nextInt();
-		
-		System.out.print("Introduce el total de productos en el Almacén 2: ");
+
+		System.out.print("Productos en Almacén 2: ");
 		int almacen2 = scan.nextInt();
 		
+		String resultado = (almacen1 == almacen2)
+					? "Ambos almacenes tienen la misma cantidad."
+					: (almacen1 > almacen2 ? "Almacén 1" : "Almacén 2") + " tiene más productos.";
+
+		System.out.println(resultado);
+
 		scan.close();
-		
-		String almacenMas = almacen1 == almacen2 ? "Misma cantidad" : almacen1 > almacen2 ? "Almacén 1 tiene más productos" : "Almacén 2 tiene más productos";
-		System.out.printf(almacenMas);
 	}
 }

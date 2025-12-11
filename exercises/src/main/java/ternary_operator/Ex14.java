@@ -10,15 +10,19 @@ import java.util.Scanner;
 
 public class Ex14 {
 	public static void main(String[] args) {
-		
 		Scanner scan = new Scanner(System.in);
+
+		System.out.println("--- COMPROBAR SI UN NUMERO ES PAR O IMPAR ---");
 		
-		System.out.print("Introduce un numerín: ");
+		System.out.print("Número: ");
 		int num = scan.nextInt();
-		
+
+		System.out.printf("%d = %s", num, esPar(num) ? "par" : "impar");
+
 		scan.close();
-		
-		String parImpar = num % 2 == 0 ? "par" : "impar";
-		System.out.printf("%d es %s", num, parImpar);
+	}
+
+	public static boolean esPar(int n) {
+		return n % 2 == 0;
 	}
 }

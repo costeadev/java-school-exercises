@@ -12,18 +12,23 @@ import java.util.Scanner;
 
 public class Ex12 {
 	public static void main(String[] args) {
-		
 		Scanner scan = new Scanner(System.in);
+
+		System.out.println("--- CALCULAR BENEFICIO VENTAS ---");
 		
-		System.out.print("Introduce la cantidad de unidades vendidas: ");
+		System.out.print("Unidades vendidas: ");
 		int unidadesVendidas = scan.nextInt();
 		
-		System.out.print("Introduce el precio por unidad: ");
+		System.out.print("Precio por unidad: ");
 		double precioPorUnidad = scan.nextDouble();
 		
+		double beneficio = calcularBeneficio(unidadesVendidas, precioPorUnidad);
+		System.out.printf("Beneficio total: %.2f €", beneficio);
+
 		scan.close();
-		
-		double beneficioTotal = unidadesVendidas * precioPorUnidad;
-		System.out.printf("Hay un beneficio total de %.2f€", beneficioTotal);
+	}
+
+	public static double calcularBeneficio(int unidades, double precio) {
+		return unidades * precio;
 	}
 }

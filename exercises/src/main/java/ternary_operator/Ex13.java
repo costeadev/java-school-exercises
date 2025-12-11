@@ -7,22 +7,23 @@ import java.util.Scanner;
  * dos variables enteras 
  * y muestre en pantalla 
  * el valor de la variable con el mayor número.
+ * (SOLO USANDO OPERADOR TERNARIO)
  */
 
 public class Ex13 {
 	public static void main(String[] args) {
-		
 		Scanner scan = new Scanner(System.in);
+
+		System.out.println("--- COMPROBAR MAYOR DE DOS NUMEROS ---");
 		
-		System.out.print("Introduce un número: ");
+		System.out.print("Número 1: ");
 		int num1 = scan.nextInt();
 		
-		System.out.print("Introduce otro número: ");
+		System.out.print("Número 2: ");
 		int num2 = scan.nextInt();
-		
+
+		System.out.printf("El número mayor es: %d", num1 > num2 ? num1 : num2);
+
 		scan.close();
-		
-		String numMayor = num1 == num2 ? "Ninguno, son iguales xd" : num1 > num2 ? ""+num1 : ""+num2;
-		System.out.printf("El número mayor es: %s", numMayor);
 	}
 }

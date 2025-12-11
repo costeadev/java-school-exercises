@@ -23,17 +23,18 @@ public class Ex23 {
 		System.out.print("Horas trabajadas dia 3: ");
 		int horasDia3 = scan.nextInt();
 		
-		scan.close();
-		
 		int horasTotales = horasDia1 + horasDia2 + horasDia3;
 		
 		boolean jornadaLegal = (horasDia1 >= 8 && horasDia1 <= 20) &&
 							   (horasDia2 >= 8 && horasDia2 <= 20) &&
 							   (horasDia3 >= 8 && horasDia3 <= 20);
 		
-		String mensaje = jornadaLegal ? "Se han trabajado entre 8 y 20 horas"
-									   : "No se trabaja lo indicado";
+		String resultado = jornadaLegal
+				? "Se han trabajado entre 8 y 20 horas"
+				: "No se trabaja lo indicado";
 		
-		System.out.printf("%s (%d horas trabajadas en 3 días)", mensaje, horasTotales);
+		System.out.printf("%s (%d horas trabajadas en 3 días)", resultado, horasTotales);
+
+		scan.close();
 	}
 }

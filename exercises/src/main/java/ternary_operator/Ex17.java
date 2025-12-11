@@ -10,24 +10,28 @@ import java.util.Scanner;
  */
 
 public class Ex17 {
-	public static void main(String[] args) {
-		
-		Scanner scan = new Scanner(System.in);
-		
-		System.out.print("Introduce un numérin: ");
-		int num1 = scan.nextInt();
-		
-		System.out.print("Introduce otro numérin: ");
-		int num2 = scan.nextInt();
-		
-		System.out.print("Introduce OTRO numérin: ");
-		int num3 = scan.nextInt();
-		
-		scan.close();
-		
-		int suma = num1 + num2 + num3;
-		String sumaDemasiadoGrande = suma > 100 ? "Oh lawd he big" : "He built smol";
-		
-		System.out.printf(sumaDemasiadoGrande);
-	}
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("--- ES DEMASIADO GRANDE LA SUMA DE 3 NÚMEROS? ---");
+
+        System.out.print("Número 1: ");
+        int num1 = scan.nextInt();
+
+        System.out.print("Número 2: ");
+        int num2 = scan.nextInt();
+
+        System.out.print("Número 3: ");
+        int num3 = scan.nextInt();
+
+        int suma = num1 + num2 + num3;
+
+        String demasiadoGrande = (suma > 100)
+                ? "La suma es demasiado grande"
+                : "La suma es: " + suma;
+
+        System.out.println(demasiadoGrande);
+
+        scan.close();
+    }
 }

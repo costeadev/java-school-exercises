@@ -12,18 +12,23 @@ import java.util.Scanner;
 
 public class Ex7 {
 	public static void main(String[] args) {
-		
 		Scanner scan = new Scanner(System.in);
+
+		System.out.println("--- CALCULAR DESCUENTO EN UN ARTICULO ---");
 		
 		System.out.print("Introduce el precio del artículo: ");
-		double precioArticulo = scan.nextDouble();
+		double precio = scan.nextDouble();
 		
 		System.out.print("Introduce el porcentaje de descuento del artículo (0-100): ");
-		double descuentoArticulo = scan.nextDouble();
+		double porcentajeDescuento = scan.nextDouble();
 		
-		scan.close();
-		
-		double precioFinal = precioArticulo * (1.0 - descuentoArticulo / 100.0);
+		double precioFinal = precioConDescuento(precio, porcentajeDescuento);
 		System.out.printf("El precio final es: %.2f€", precioFinal);
+
+		scan.close();
+	}
+
+	public static double precioConDescuento(double precio, double porcentajeDescuento) {
+		return precio * (1 - porcentajeDescuento / 100);
 	}
 }

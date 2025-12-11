@@ -11,18 +11,23 @@ import java.util.Scanner;
 
 public class Ex5 {
 	public static void main(String[] args) {
-		
 		Scanner scan = new Scanner(System.in);
+
+		System.out.println("--- CALCULAR AREA RECTANGULO ---");
 		
-		System.out.print("Introduce el ancho del rectángulo: ");
-		int anchoRectangulo = scan.nextInt();
+		System.out.print("Ancho del rectángulo: ");
+		int ancho = scan.nextInt();
 		
-		System.out.print("Introduce el ancho del rectángulo: ");
-		int alturaRectangulo = scan.nextInt();
+		System.out.print("Alto del rectángulo: ");
+		int alto = scan.nextInt();
 		
+		int area = calcularAreaRectangulo(ancho, alto);
+		System.out.printf("El área del rectángulo es: %d", area);
+
 		scan.close();
-		
-		int areaRectangulo = anchoRectangulo * alturaRectangulo;
-		System.out.printf("El área del rectángulo es: %d", areaRectangulo);
+	}
+
+	public static int calcularAreaRectangulo(int ancho, int alto) {
+		return ancho * alto;
 	}
 }

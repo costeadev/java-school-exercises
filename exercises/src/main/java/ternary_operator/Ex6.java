@@ -13,18 +13,20 @@ import java.util.Scanner;
 
 public class Ex6 {
 	public static void main(String[] args) {
-		
 		Scanner scan = new Scanner(System.in);
+
+		System.out.println("--- COMPROBAR SI HAY STOCK SUFICIENTE ---");
 		
-		System.out.print("Introduce el stock que hay: ");
+		System.out.print("Stock disponible: ");
 		int stock = scan.nextInt();
 		
-		System.out.print("Introduce las unidades de productos deseados: ");
-		int unidadesDeseadas = scan.nextInt();
-		
-		scan.close();
-		
-		boolean hayStock = stock >= unidadesDeseadas;
+		System.out.print("Unidades deseadas: ");
+		int unidades = scan.nextInt();
+
+		boolean hayStock = stock >= unidades;
+
 		System.out.printf("Hay suficiente stock: %b", hayStock);
+
+		scan.close();
 	}
 }

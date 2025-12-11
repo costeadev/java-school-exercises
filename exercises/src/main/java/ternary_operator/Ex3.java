@@ -12,14 +12,15 @@ import java.util.Scanner;
 
 public class Ex3 {
 	public static void main(String[] args) {
-		
 		Scanner scan = new Scanner(System.in);
+
+		System.out.println("--- COMPROBAR SI EL ESTUDIANTE HA APROBADO ---");
 		
-		System.out.print("Ha aprobado el estudiante? ('true' o 'false'): ");
+		System.out.print("Ha aprobado el estudiante? (true/false): ");
 		boolean haAprobado = scan.nextBoolean();
 		
-		scan.close();
-		
 		System.out.printf("El estudiante ha aprobado?: %b", haAprobado);
+
+		scan.close();
 	}
 }

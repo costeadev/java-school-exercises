@@ -11,18 +11,24 @@ import java.util.Scanner;
 
 public class Ex15 {
 	public static void main(String[] args) {
-		
 		Scanner scan = new Scanner(System.in);
+
+		System.out.println("--- RESTA QUE NUNCA ES NEGATIVA ---");
 		
-		System.out.print("Introduce un numerín: ");
+		System.out.print("Número 1: ");
 		double num1 = scan.nextDouble();
-		
-		System.out.print("Introduce otro numerín: ");
+
+		System.out.print("Número 2: ");
 		double num2 = scan.nextDouble();
 		
-		scan.close();
-		
-		double resta = (num1 - num2) > 0 ? (num1 - num2) : (num2 - num1);
+		double resta = valorAbsoluto(num1 - num2);
+
 		System.out.printf("El resultado de la resta es: %.2f", resta);
+
+		scan.close();
+	}
+
+	public static double valorAbsoluto(double num) {
+        return Math.sqrt(num * num);
 	}
 }

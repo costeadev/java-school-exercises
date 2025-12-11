@@ -13,18 +13,23 @@ import java.util.Scanner;
 
 public class Ex8 {
 	public static void main(String[] args) {
-		
 		Scanner scan = new Scanner(System.in);
+
+		System.out.println("--- CALCULAR SALARIO SEMANAL ---");
 		
-		System.out.print("Introduce horas trabajadas esta semana: ");
+		System.out.print("Horas trabajadas esta semana: ");
 		int horasTrabajadas = scan.nextInt();
 		
-		System.out.print("Introduce tarifa por hora: ");
+		System.out.print("Tarifa por hora: ");
 		double tarifaPorHora = scan.nextDouble();
 		
-		scan.close();
-		
-		double salarioSemanal = horasTrabajadas * tarifaPorHora;
+		double salarioSemanal = calcularSalarioSemanal(horasTrabajadas, tarifaPorHora);
 		System.out.printf("Te corresponden %.2f€ esta semana.", salarioSemanal);
+
+		scan.close();
+	}
+
+	public static double calcularSalarioSemanal (int horasTrabajadas, double tarifaPorHora) {
+		return horasTrabajadas * tarifaPorHora;
 	}
 }

@@ -11,22 +11,28 @@ import java.util.Scanner;
 
 public class Ex2 {
 	public static void main(String[] args) {
-		
 		Scanner scan = new Scanner(System.in);
+
+		System.out.println("--- CALCULAR PROMEDIO DE 3 NÚMEROS ---");
 		
-		System.out.print("Introduce un número: ");
+		System.out.print("Número 1: ");
 		double num1 = scan.nextDouble();
 		
-		System.out.print("Introduce otro número: ");
+		System.out.print("Número 2: ");
 		double num2 = scan.nextDouble();
 		
-		System.out.print("Introduce OTRO número: ");
+		System.out.print("Número 3: ");
 		double num3 = scan.nextDouble();
-		
+
+		double avg = average(num1, num2, num3);
+
+		System.out.printf("\nNúmeros: {%.2f, %.2f, %.2f}\n", num1, num2, num3);
+		System.out.printf("Promedio: %.2f", avg);
+
 		scan.close();
-		
-		
-		double promedio = (num1 + num2 + num3)/3;
-		System.out.printf("El promedio de %.2f, %.2f y %.2f es %.2f", num1, num2, num3, promedio);
+	}
+
+	public static double average(double a, double b, double c) {
+		return (a + b + c) / 3;
 	}
 }

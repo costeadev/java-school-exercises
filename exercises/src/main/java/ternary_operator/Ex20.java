@@ -12,25 +12,22 @@ import java.util.Scanner;
 
 public class Ex20 {
 	public static void main(String[] args) {
-		
 		Scanner scan = new Scanner(System.in);
 		
 		System.out.print("Nota final asignatura 1: ");
-		double notaFinalAsignatura1 = scan.nextDouble();
+		double nota1 = scan.nextDouble();
 		
 		System.out.print("Nota final asignatura 2: ");
-		double notaFinalAsignatura2 = scan.nextDouble();
+		double nota2 = scan.nextDouble();
 		
-		scan.close();
-		
-		boolean notasValidas = (notaFinalAsignatura1 >= 0 && notaFinalAsignatura1 <= 10) && (notaFinalAsignatura2 >= 0 && notaFinalAsignatura2 <= 10);
-		
-		String aprobadoAlguna = !notasValidas ?				
-				"Notas no válidas" 
-				:((notaFinalAsignatura1 >= 5) || (notaFinalAsignatura2 >= 5)) 
-				   ? "El estudiante aprobó al menos una asignatura" 
+		String resultado = (nota1 < 0 || nota1 > 10 || nota2 < 0 || nota2 > 10)
+				? "Notas no válidas"
+				:(nota1 >= 5 || nota2 >= 5)
+				   ? "Aprobó al menos una asignatura"
 				   : "No aprobó ninguna asignatura";  
 		
-		System.out.println(aprobadoAlguna);
+		System.out.println(resultado);
+
+		scan.close();
 	}
 }

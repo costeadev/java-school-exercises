@@ -12,18 +12,26 @@ import java.util.Scanner;
 
 public class Ex10 {
 	public static void main(String[] args) {
-		
 		Scanner scan = new Scanner(System.in);
+
+		System.out.println("--- CALCULAR KILOMETROS HORA ---");
 		
-		System.out.print("Introduce distancia en km: ");
+		System.out.print("Distancia (km): ");
 		int distancia = scan.nextInt();
 		
-		System.out.print("Introduce tiempo en horas: ");
+		System.out.print("Tiempo (horas): ");
 		int tiempo = scan.nextInt();
 		
 		scan.close();
 		
-		int kilometrosHora = distancia / tiempo;
-		System.out.printf("Para recorrer %d km en %d horas es necesario ir a %d km/h", distancia, tiempo, kilometrosHora);
+		int velocidad = calcularVelocidad(distancia, tiempo);
+		System.out.printf(
+			"Para recorrer %d km en %d horas es necesario ir a %d km/h",
+			distancia, tiempo, velocidad
+		);
+	}
+
+	public static int calcularVelocidad(int distancia, int tiempo) {
+		return distancia / tiempo;
 	}
 }
