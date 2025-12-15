@@ -9,24 +9,20 @@ import java.util.Scanner;
 public class Ex18 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		
-		System.out.print("Introduce un solo carácter: ");
-		String input1 = scan.next();
-		char char1 = input1.charAt(0);
-		
-		System.out.print("Introduce un solo carácter: ");
-		String input2 = scan.next();
-		char char2 = input2.charAt(0);
-		
-		System.out.print("Introduce un solo carácter: ");
-		String input3 = scan.next();
-		char char3 = input3.charAt(0);
-		
-		System.out.print("Introduce un solo carácter: ");
-		String input4 = scan.next();
-		char char4 = input4.charAt(0);
-		
-		scan.close();
+
+		System.out.println("--- COMPROBAR QUE SE HAYA INTRODUCIDO 'g' 'a' 't' 'o' ---");
+
+		System.out.print("Carácter 1: ");
+		char char1 = scan.next().charAt(0);
+
+		System.out.print("Carácter 2: ");
+		char char2 = scan.next().charAt(0);
+
+		System.out.print("Carácter 3: ");
+		char char3 = scan.next().charAt(0);
+
+		System.out.print("Carácter 4: ");
+		char char4 = scan.next().charAt(0);
 
 		String word = "" + char1 + char2 + char3 + char4;
 		
@@ -35,5 +31,7 @@ public class Ex18 {
 		} else {
 			System.out.printf("La palabra es '%s', NO está correcto", word);
 		}
+
+		scan.close();
 	}
 }

@@ -12,28 +12,30 @@ import java.util.Scanner;
 public class Ex20 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
+
+		System.out.println("--- SUMAR O RESTAR 2 NUMEROS ---");
 		
-		System.out.print("Introduce un número: ");
+		System.out.print("Número 1: ");
 		int num1 = scan.nextInt();
 		
-		System.out.print("Introduce otro número: ");
+		System.out.print("Número 2: ");
 		int num2 = scan.nextInt();
 		
-		System.out.print("Introduce ('1' para sumar) ('2' para restar): ");
+		System.out.print("'1' = suma / '2' = resta: ");
 		int op = scan.nextInt();
-		
-		scan.close();
 		
 		switch (op) {
 		case 1: 
-			System.out.printf("%n%d + %d = %d", num1, num2, num1 + num2);
+			System.out.printf("\n%d + %d = %d", num1, num2, num1 + num2);
 			break;
 		case 2: 
-			System.out.printf("%n%d - %d = %d", num1, num2, num1 - num2);
+			System.out.printf("\n%d - %d = %d", num1, num2, num1 - num2);
 			break;
 		default: 
 			System.out.println("Operación no válida");
 			break;
 		}
+
+		scan.close();
 	}
 }

@@ -1,4 +1,4 @@
-package classes.figuras;
+package classes.Ej12;
 
 public class Circulo {
     private final double radio;

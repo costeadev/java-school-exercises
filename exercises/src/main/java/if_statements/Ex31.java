@@ -8,11 +8,7 @@ public class Ex31 {
 		
 		System.out.print("Introduce un número entre 0 y 99: ");
 		int num = scan.nextInt();
-		
-		scan.close();
-		
-		
-		// Input validation
+
 		if (num < 0 || num > 99) {
 			System.err.println("Error: Valor no válido");
 			return;
@@ -137,5 +133,7 @@ public class Ex31 {
 			}
 		}
 		System.out.printf("%d = %s", num, numTexto);
+
+		scan.close();
 	}
 }

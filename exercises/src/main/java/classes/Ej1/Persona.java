@@ -1,4 +1,4 @@
-package classes.prueba;
+package classes.Ej1;
 
 // 1.
 public class Persona {

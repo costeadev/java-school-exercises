@@ -12,44 +12,39 @@ public class Ex278 {
 		Scanner scan = new Scanner(System.in);
 		
 		System.out.print("Introduce el día: ");
-		int dia = scan.nextInt();
+		int day = scan.nextInt();
 		
 		System.out.print("Introduce el mes: ");
-		int mes = scan.nextInt();
+		int month = scan.nextInt();
 		
 		System.out.print("Introduce el año: ");
-		int anyo = scan.nextInt();
-		
-		scan.close();
-		
+		int year = scan.nextInt();
 		
 		// Check if the date is valid
-		boolean esCorrecta = true;
+		boolean validDate = true;
 		
-		if (dia < 1 || dia > 30) esCorrecta = false;
-		if (mes < 1 || mes > 12) esCorrecta = false;
-		if (anyo < 0) esCorrecta = false;
+		if (day < 1 || day > 30) validDate = false;
+		if (month < 1 || month > 12) validDate = false;
+		if (year < 0) validDate = false;
 		
-		if (!esCorrecta) {System.err.print("Error: Fecha no válida"); return;}
-		
-		// New year's eve
-		if (dia == 30 && mes == 12) {
-			dia = 1;
-			mes = 1;
-			anyo++;
-			
-		// Next month
-		} else if (dia == 30) {
-			dia = 1;
-			mes++;
-			
-		// Next day
-		} else {
-			dia++;
+		if (!validDate) {
+			System.err.print("Error: Fecha no válida");
+			return;
+		 }
+
+		if (day == 30 && month == 12) { // New year's eve
+			day = 1;
+			month = 1;
+			year++;
+		} else if (day == 30) { // Next month
+			day = 1;
+			month++;
+		} else { // Next day
+			day++;
 		}
-		
-		
-		// Print
-		System.out.printf("%nEl día SIGUIENTE sería el %02d-%02d-%d", dia, mes, anyo);
+
+		System.out.printf("%nEl día SIGUIENTE sería el %02d-%02d-%d", day, month, year);
+
+		scan.close();
 	}
 }

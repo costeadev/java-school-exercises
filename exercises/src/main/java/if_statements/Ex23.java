@@ -8,12 +8,11 @@ public class Ex23 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 
+		System.out.println("--- CONTAR CIFRAS DE UN NUMERO ---");
+
 		System.out.print("Introduce un número entre 0 y 99999: ");
 		int num = scan.nextInt();
 
-		scan.close();
-
-		// Input validation
 		if (num < 0 || num > 99999) {
 			System.err.print("Error: Número fuera de rango.");
 			return;
@@ -64,5 +63,7 @@ public class Ex23 {
 		System.out.printf("- %d dígito%s%n", digitos, digitos > 1 ? "s" : "");
 		System.out.printf("- %d decenas de millar, %d millares, %d centenas, %d decenas y %d unidades%n", decenasMillar, millares, centenas, decenas, unidades);
 		System.out.printf("- Reversed: %s", reversed);
+
+		scan.close();
 	}
 }

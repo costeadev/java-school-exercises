@@ -10,55 +10,54 @@ import java.util.Scanner;
 public class Ex28 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
+
+		System.out.println("--- COMPROBAR SI UNA FECHA ES CORRECTA ---");
 		
 		System.out.print("Introduce el día: ");
-		int dia = scan.nextInt();
+		int day = scan.nextInt();
 		
 		System.out.print("Introduce el mes: ");
-		int mes = scan.nextInt();
+		int month = scan.nextInt();
 		
 		System.out.print("Introduce el año: ");
-		int anyo = scan.nextInt();
-		
-		scan.close();
-		
-		
-		// Check if the date is valid
-		boolean esCorrecta = true;
-		if (dia < 1 || mes < 1 || mes > 12 || anyo < 0) esCorrecta = false;
+		int year = scan.nextInt();
+
+		boolean validDate = true;
+		if (day < 1 || month < 1 || month > 12 || year < 0) validDate = false;
 		
 		// Days per month
-		int diasMes;
-		switch (mes) {
+		int monthDays;
+		switch (month) {
 			case 4: case 6: case 9: case 11:
-				diasMes = 30;
+				monthDays = 30;
 				break;
 			case 2:
-				diasMes = 28;
+				monthDays = 28;
 				break;
 			default:
-				diasMes = 31;
+				monthDays = 31;
 				break;
 		}
 		
-		 if (dia > diasMes) esCorrecta = false;
-		 if (!esCorrecta) {
+		 if (day > monthDays) validDate = false;
+		 if (!validDate) {
 			 System.err.print("Error: Fecha no válida");
 			 return;
 		 }
 		 
 		 // Calculate next day
-		 dia++;
-		 if (dia > diasMes) {
-			 dia = 1;
-			 mes++;
-			 if (mes > 12) {
-				 mes = 1;
-				 anyo++;
+		 day++;
+		 if (day > monthDays) {
+			 day = 1;
+			 month++;
+			 if (month > 12) {
+				 month = 1;
+				 year++;
 			 }
 		 }
-		
-		
-		System.out.printf("%nEl día SIGUIENTE sería el %02d-%02d-%d", dia, mes, anyo);
+
+		System.out.printf("%nEl día SIGUIENTE sería el %02d-%02d-%d", day, month, year);
+
+		scan.close();
 	}
 }

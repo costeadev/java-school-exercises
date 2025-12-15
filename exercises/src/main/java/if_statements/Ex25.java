@@ -9,25 +9,28 @@ import java.util.Scanner;
 public class Ex25 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		
-		System.out.print("Introduce el día: ");
-		int dia = scan.nextInt();
-		
-		System.out.print("Introduce el mes: ");
-		int mes = scan.nextInt();
-		
-		System.out.print("Introduce el año: ");
-		int anyo = scan.nextInt();
-		
-		scan.close();
 
-		// Check if the date is valid
-		boolean esCorrecta = true;
-	
-		if (dia < 1 || dia > 30) esCorrecta = false;
-		if (mes < 1 || mes > 12) esCorrecta = false;
-		if (anyo < 0) esCorrecta = false;
+		System.out.println("--- COMPROBAR SI UNA FECHA ES CORRECTA ---");
 		
-		System.out.printf("%nLa fecha %d-%d-%d%s es correcta", dia, mes, anyo, esCorrecta ? "" : " NO");
+		System.out.print("Día: ");
+		int day = scan.nextInt();
+		
+		System.out.print("Mes: ");
+		int month = scan.nextInt();
+		
+		System.out.print("Año: ");
+		int year = scan.nextInt();
+
+		boolean validDate = true;
+		if (day < 1 || day > 30) validDate = false;
+		if (month < 1 || month > 12) validDate = false;
+		if (year < 0) validDate = false;
+		
+		System.out.printf(
+				"\nLa fecha %d-%d-%d es correcta?: %s",
+				day, month, year, (validDate) ? "Si" : " No"
+		);
+
+		scan.close();
 	}
 }

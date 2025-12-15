@@ -1,4 +1,4 @@
-package classes.figuras;
+package classes.Ej12;
 
 import java.util.Scanner;
 

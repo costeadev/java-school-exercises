@@ -1,4 +1,4 @@
-package classes.cuenta;
+package classes.Ej11;
 
 public class Cuenta {
     private String titular;

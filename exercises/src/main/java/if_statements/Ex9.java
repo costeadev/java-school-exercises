@@ -12,27 +12,29 @@ import java.util.Scanner;
 public class Ex9 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
+
+		System.out.println("--- CALCULAR TARIFA ALQUIER COCHE ---");
 		
 		System.out.print("Introduce la cantidad de kilómetros recorridos: ");
-		int km = scan.nextInt();
+		int distancia = scan.nextInt();
 		
-		scan.close();
-		
-		if (km < 0) {
+		if (distancia < 0) {
 			System.err.println("Error: Valor negativo no válido");
 			return;
 		}
 		
-		int finalPrice;
+		int finalPrice = 0;
 		
-		if (km <= 300) {
+		if (distancia <= 300) {
 			finalPrice = 200;
-		} else if (km <= 1000) {
-			finalPrice = 200 + (km - 300) * 15;
+		} else if (distancia <= 1000) {
+			finalPrice = 200 + (distancia - 300) * 15;
 		} else {
-			finalPrice = 200 + 700 * 15 + (km - 1000) * 10;
+			finalPrice = 200 + 700 * 15 + (distancia - 1000) * 10;
 		}
 		
-		System.out.printf("El precio final es de %d€%n", finalPrice);	
+		System.out.printf("El precio final es de %d€%n", finalPrice);
+
+		scan.close();
 	}
 }

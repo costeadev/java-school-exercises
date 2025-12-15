@@ -13,51 +13,47 @@ public class Ex29 {
 
 		System.out.println("FECHA 1");
 		System.out.println("-------------------------------");
-		System.out.print("Introduce el día de la 1ª fecha: ");
-		int dia1 = scan.nextInt();
 
-		System.out.print("Introduce el mes de la 1ª fecha: ");
-		int mes1 = scan.nextInt();
+		System.out.print("Dia: ");
+		int day1 = scan.nextInt();
 
-		System.out.print("Introduce el año de la 1ª fecha: ");
-		int anyo1 = scan.nextInt();
+		System.out.print("Mes: ");
+		int month1 = scan.nextInt();
+
+		System.out.print("Año: ");
+		int year1 = scan.nextInt();
 
 		System.out.println("\nFECHA 2");
 		System.out.println("-------------------------------");
-		System.out.print("Introduce el día de la 2ª fecha: ");
-		int dia2 = scan.nextInt();
 
-		System.out.print("Introduce el mes de la 2ª fecha: ");
-		int mes2 = scan.nextInt();
+		System.out.print("Dia: ");
+		int day2 = scan.nextInt();
 
-		System.out.print("Introduce el año de la 2ª fecha: ");
-		int anyo2 = scan.nextInt();
+		System.out.print("Mes: ");
+		int month2 = scan.nextInt();
 
-		scan.close();
+		System.out.print("Año: ");
+		int year2 = scan.nextInt();
 
-		// Input validation
-		boolean fecha1esCorrecta = true;
-		if (dia1 < 1 || dia1 > 30 || mes1 < 1 || mes1 > 12 || anyo1 < 0)
-			fecha1esCorrecta = false;
-		if (!fecha1esCorrecta) {
-			System.err.println("Error: Fecha 1 no válida");
-			return;
-		}
-
-		boolean fecha2esCorrecta = true;
-		if (dia2 < 1 || mes2 < 1 || mes2 > 12 || anyo2 < 0)
-			fecha2esCorrecta = false;
-		if (!fecha2esCorrecta) {
-			System.err.println("Error: Fecha 2 no válida");
-			return;
-		}
+		boolean validDate1 = isValidDate(day1, month1, year1);
+		boolean validDate2 = isValidDate(day2, month2, year2);
 		
 		// Calculate the difference between each date
-		int total1 = (anyo1 * 12 * 30) + (mes1 * 30) + dia1;
-		int total2 = (anyo2 * 12 * 30) + (mes2 * 30) + dia2;
+		int total1 = (year1 * 12 * 30) + (month1 * 30) + day1;
+		int total2 = (year2 * 12 * 30) + (month2 * 30) + day2;
 		int diferencia = Math.abs(total1 - total2);
 		
-		System.out.printf("%nEntre el %d-%d-%d y el %d-%d-%d hay %d días de diferencia", dia1, mes1, anyo1, dia2, mes2, anyo2, diferencia);
+		System.out.printf("%nEntre el %d-%d-%d y el %d-%d-%d hay %d días de diferencia", day1, month1, year1, day2, month2, year2, diferencia);
 
+		scan.close();
+	}
+
+	public static boolean isValidDate(int day, int month, int year) {
+		if (day < 1 || day > 30 || month < 1 || month > 12 || year < 0) {
+			return false;
+		}
+		else {
+			return true;
+		}
 	}
 }

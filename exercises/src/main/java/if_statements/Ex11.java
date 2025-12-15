@@ -8,6 +8,8 @@ import java.util.Scanner;
 public class Ex11 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
+
+		System.out.println("--- INDICAR MENOR Y MAYOR DE 4 NUMEROS ---");
 		
 		System.out.print("Introduce un número: ");
 		int num1 = scan.nextInt();
@@ -21,8 +23,6 @@ public class Ex11 {
 		System.out.print("Introduce OTRO número más: ");
 		int num4 = scan.nextInt();
 		
-		scan.close();
-		
 		int biggest = num1;
 		if (num2 > biggest) biggest = num2;
 		if (num3 > biggest) biggest = num3;
@@ -34,6 +34,7 @@ public class Ex11 {
 		if (num4 < smallest) smallest = num4;
 		
 		System.out.printf("Más grande: %d%nMás pequeño: %d%n", biggest, smallest);
-		
+
+		scan.close();
 	}
 }

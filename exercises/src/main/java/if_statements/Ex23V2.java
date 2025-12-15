@@ -8,31 +8,28 @@ public class Ex23V2 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 
+		System.out.println("--- MOSTRAR NUMERO CON CIFRAS AL REVES ---");
+
 		System.out.print("Introduce un número entre 0 y 99999: ");
 		int num = scan.nextInt();
 
-		scan.close();
-
-		// Input validation
 		if (num < 0 || num > 99999) {
 			System.err.print("Error: Número fuera de rango.");
 			return;
 		}
-		
-		// Extract digits
+
 		int decenasMillar = num / 10000;
 		int millares = (num % 10000) / 1000;
 		int centenas = (num % 1000) / 100;
 		int decenas = (num % 100) / 10;
 		int unidades = num % 10;
-		
-		// Count digits
+
+
 		int digitos = (decenasMillar > 0 ? 5 :
 			          millares > 0 ? 4 :
 			          centenas > 0 ? 3 :
 			          decenas > 0 ? 2 : 1);
-	    
-		// Check if is capicua
+
 		boolean esCapicua = false;
 		switch(digitos) {
 			case 5: esCapicua = (unidades == decenasMillar) && (decenas == millares); break;
@@ -41,9 +38,7 @@ public class Ex23V2 {
 			case 2: esCapicua = (unidades == decenas); break;
 			case 1: esCapicua = true; break;
 		}
-		
-		
-		// PRINT STUFF
+
 		System.out.printf("%n%nNÚMERO: %d%n", num);
 		System.out.println("----------------");
 		System.out.printf("- Dígitos: %d%n", digitos);
@@ -56,14 +51,15 @@ public class Ex23V2 {
 		System.out.println("----------------");
 		System.out.print("- Reversed: ");
 		switch(digitos) {
-		    case 5: System.out.printf("%d%d%d%d%d%n", unidades, decenas, centenas, millares, decenasMillar); break;
-		    case 4: System.out.printf("%d%d%d%d%n", unidades, decenas, centenas, millares); break;
-		    case 3: System.out.printf("%d%d%d%n", unidades, decenas, centenas); break;
-		    case 2: System.out.printf("%d%d%n", unidades, decenas); break;
-		    case 1: System.out.printf("%d%n", unidades); break;
+		    case 5 -> {System.out.printf("%d%d%d%d%d%n", unidades, decenas, centenas, millares, decenasMillar);}
+		    case 4 -> {System.out.printf("%d%d%d%d%n", unidades, decenas, centenas, millares);}
+		    case 3 -> {System.out.printf("%d%d%d%n", unidades, decenas, centenas);}
+		    case 2 -> {System.out.printf("%d%d%n", unidades, decenas);}
+		    case 1 -> {System.out.printf("%d%n", unidades);}
 		}
 		System.out.printf("- Capicúa: %s%n", esCapicua ? "si" : "no");
 		System.out.println("----------------");
 
+		scan.close();
 	}
 }

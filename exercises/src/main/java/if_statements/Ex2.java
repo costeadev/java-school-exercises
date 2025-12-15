@@ -4,16 +4,16 @@ import java.util.Scanner;
 
 /*
  * Realizar un programa que lea un año e indique si es o no bisiesto.
- * */
+ */
 
 public class Ex2 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
+
+		System.out.println("--- COMPROBAR SI UN AÑO ES BISIESTO ---");
 		
-		System.out.print("Introduce un año: ");
+		System.out.print("Año: ");
 		int year =  scan.nextInt();
-		
-		scan.close();
 		
 		boolean validInput = (year >= 1 && year <= 10000);
 		boolean isLeap = (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0));
@@ -28,6 +28,7 @@ public class Ex2 {
 		} else {
 			System.out.printf("El año %d no es bisiesto", year);
 		}
-		
+
+		scan.close();
 	 }
 }

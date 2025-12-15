@@ -11,11 +11,11 @@ import java.util.Scanner;
 public class Ex8 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
+
+		System.out.println("--- ESCRIBIR MAYOR NUMERO CON 3 CIFRAS ---");
 		
 		System.out.print("Introduce un número de 3 cifras: ");
 		int num = scan.nextInt();
-		
-		scan.close();
 		
 		boolean validInput = (num >= 100 && num <= 999 || num <= -100 && num >= -999);
 		if (!validInput) {
@@ -44,5 +44,7 @@ public class Ex8 {
 		newNumber *= sign;
 		
 		System.out.printf("El mayor número posible con las cifras de %d es %d", num, newNumber);
+
+		scan.close();
 	}
 }

@@ -10,37 +10,35 @@ import java.util.Scanner;
 public class Ex26 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
+
+		System.out.println("--- COMPROBAR SI LA FECHA ES CORRECTA ---");
 		
 		System.out.print("Introduce el día: ");
-		int dia = scan.nextInt();
+		int day = scan.nextInt();
 		
 		System.out.print("Introduce el mes: ");
-		int mes = scan.nextInt();
+		int month = scan.nextInt();
 		
 		System.out.print("Introduce el año: ");
-		int anyo = scan.nextInt();
-		
-		scan.close();
-		
-		
-		boolean esCorrecta = true;
-		
-		// Check if the date is valid
-		if (dia < 1) esCorrecta = false;
-		if (mes < 1 || mes > 12) esCorrecta = false;
-		if (anyo < 0) esCorrecta = false;
-		
-		// Check if the days of each month are valid
-		switch(mes) {
+		int year = scan.nextInt();
+
+		boolean validDate = true;
+
+		if (day < 1) validDate = false;
+		if (month < 1 || month > 12) validDate = false;
+		if (year < 0) validDate = false;
+
+		switch(month) {
 		case 4: case 6: case 9: case 11:
-			if (dia > 30) esCorrecta = false; break;
+			if (day > 30) validDate = false; break;
 		case 1: case 3: case 5: case 7: case 8: case 10: case 12:
-			if (dia > 31) esCorrecta = false; break;
+			if (day > 31) validDate = false; break;
 		case 2:
-			if (dia > 28) esCorrecta = false; break;
+			if (day > 28) validDate = false; break;
 		}
-		
-		// Print
-		System.out.printf("%nLa fecha %d-%d-%d%s es correcta", dia, mes, anyo, esCorrecta ? "" : " NO");
+
+		System.out.printf("%nLa fecha %d-%d-%d%s es correcta", day, month, year, validDate ? "" : " NO");
+
+		scan.close();
 	}
 }

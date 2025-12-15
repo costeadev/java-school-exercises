@@ -1,4 +1,4 @@
-package classes.cuenta;
+package classes.Ej11;
 
 import java.util.Scanner;
 

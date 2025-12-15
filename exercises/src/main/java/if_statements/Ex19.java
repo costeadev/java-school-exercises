@@ -15,31 +15,26 @@ import java.util.Scanner;
 public class Ex19 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
+
+		System.out.println("--- MOVER CARACTERES UN NUMERO DE SALTOS ---");
 		
-		System.out.print("Introduce una letra minúscula: ");
-		String input1 = scan.next();
-		char char1 = input1.charAt(0);
-		
-		System.out.print("Introduce otra letra minúscula: ");
-		String input2 = scan.next();
-		char char2 = input2.charAt(0);
-		
-		System.out.print("Introduce OTRA letra minúscula: ");
-		String input3 = scan.next();
-		char char3 = input3.charAt(0);
-		
-		
+		System.out.print("Letra minúscula 1: ");
+		char char1 = scan.next().charAt(0);
+
+		System.out.print("Letra minúscula 2: ");
+		char char2 = scan.next().charAt(0);
+
+		System.out.print("Letra minúscula 3: ");
+		char char3 = scan.next().charAt(0);
+
 		int jumps = 0;
 		System.out.print("Introduce un número entero POSITIVO: ");
-		
 		// Comprobamos que 'jumps' sea un Int válido
 		if (scan.hasNextInt()) {
-			
 			jumps = scan.nextInt();
-			
 			// En caso de que sea mayor que (Integer.MAX_VALUE - 122), mostramos un error
 		     if (jumps > Integer.MAX_VALUE - 122) {
-		        System.err.println("ERROR: El número es demasiado grande (máx permitido: " + (Integer.MAX_VALUE - 122) + ")");
+		        System.err.printf("ERROR: El número es demasiado grande (máx permitido: %d", Integer.MAX_VALUE - 122);
 		        return;
 		    }
 		// En caso de que no lo sea
@@ -48,15 +43,13 @@ public class Ex19 {
 			return;
 		}
 		
-		scan.close();
-
-		
-		
 		// Input validation (Comprobamos que el número sea un char ASCII mínuscula y que no sea negativo
 		if (jumps < 0) {
 			System.err.println("ERROR: El número debe ser positivo.");
 		}
-		boolean validLowercase = (char1 >= 97 && char1 <= 122) && (char2 >= 97 && char2 <= 122) && (char3 >= 97 && char3 <= 122);
+		boolean validLowercase = (char1 >= 97 && char1 <= 122) &&
+								 (char2 >= 97 && char2 <= 122) &&
+								 (char3 >= 97 && char3 <= 122);
 		if (!validLowercase) {
 			System.err.println("ERROR: Valor no válido, deben ser letras minúsculas de (a-z)");
 			return;
@@ -92,29 +85,24 @@ public class Ex19 {
 													// Ej2: 140 - (1 * 26) = 114 (r)	
 					
 		}
-
-		
 		// x = 120 jump = 3  149(a) 150(b) 2 * 26 = 52 150-52 = 98(b)
-		
-		// Char2
+
 		int newChar2 = char2 + jumps;
 		if (newChar2 > 122) {
 			int excessTimes = (newChar2 - 97) / 26;
 			newChar2 -= (excessTimes * 26);
 		}
 
-		// Char3
 		int newChar3 = char3 + jumps;
 		if (newChar3 > 122) {
 			int excessTimes = (newChar3 - 97) / 26;
 			newChar3 -= (excessTimes * 26);
 		}
-		
-		
-		// PRINT
+
 		System.out.printf("%n%c --> %d --> %c", char1, jumps, newChar1);
 		System.out.printf("%n%c --> %d --> %c", char2, jumps, newChar2);
 		System.out.printf("%n%c --> %d --> %c", char3, jumps, newChar3);
-		
+
+		scan.close();
 	}
 }

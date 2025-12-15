@@ -5,14 +5,14 @@ import java.util.Scanner;
 public class Ex1 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
+
+		System.out.println("--- COMPROBAR SI UN NUMERO ES MULTIPLO DE OTRO ---");
 		
-		System.out.print("Introduce un número: ");
+		System.out.print("Número 1: ");
 		int num1 = scan.nextInt();
 		
-		System.out.print("Introduce otro número: ");
+		System.out.print("Número 2: ");
 		int num2 = scan.nextInt();
-		
-		scan.close();
 		
 		if (num1 == 0 || num2 == 0) {
 			System.out.println("No se puede dividir por cero lol.");
@@ -26,5 +26,7 @@ public class Ex1 {
 		} else {
 			System.out.println("Ninguno es múltiplo del otro.");
 		}
+
+		scan.close();
 	}
 }

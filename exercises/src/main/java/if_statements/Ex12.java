@@ -9,6 +9,8 @@ import java.util.Scanner;
 public class Ex12 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
+
+		System.out.println("--- COMPROBAR SI 4 NUMEROS SON IGUALES ---");
 		
 		System.out.print("Introduce un número: ");
 		int num1 = scan.nextInt();
@@ -25,7 +27,7 @@ public class Ex12 {
 		scan.close();
 		
 		
-		if (num1 == num2 && num1 == num3 && num1 == num4) {
+		if (num1 == num2 && num2 == num3 && num3 == num4) {
 			System.out.printf("%n%d %d %d y %d son todos iguales", num1, num2, num3, num4);
 		} else {
 			System.out.printf("%n%d %d %d y %d NO son todos iguales", num1, num2, num3, num4);

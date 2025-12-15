@@ -13,54 +13,31 @@ public class Ex30 {
 		
 		System.out.print("Introduce una nota: ");
 		int nota = scan.nextInt();
-		
-		scan.close();
-		
-		
-		// Input validation
+
 		if (nota < 0 || nota > 10) {
 			System.err.println("Error: Valor no válido");
 			return;
 		}
-		
-		// Tranform from number to text
-		String notaTexto = "";
-		switch(nota) {
-		case 0:
-			notaTexto = "cero";
-			break;
-		case 1:
-			notaTexto = "uno";
-			break;
-		case 2:
-			notaTexto = "dos";
-			break;
-		case 3:
-			notaTexto = "tres";
-			break;
-		case 4:
-			notaTexto = "cuatro";
-			break;
-		case 5:
-			notaTexto = "cinco";
-			break;
-		case 6:
-			notaTexto = "seis";
-			break;
-		case 7:
-			notaTexto = "siete";
-			break;
-		case 8:
-			notaTexto = "ocho";
-			break;
-		case 9:
-			notaTexto = "nueve";
-			break;
-		case 10:
-			notaTexto = "diez";
-			break;
+
+		System.out.printf("%d = %s", nota, numberToWord(nota));
+
+		scan.close();
+	}
+	
+	public static String numberToWord(int number) {
+		switch(number) {
+			case 0 -> {return "cero";}
+			case 1 -> {return "uno";}
+			case 2 -> {return "dos";}
+			case 3 -> {return "tres";}
+			case 4 -> {return "cuatro";}
+			case 5 -> {return "cinco";}
+			case 6 -> {return "seis";}
+			case 7 -> {return "siete";}
+			case 8 -> {return "ocho";}
+			case 9 -> {return "nueve";}
+			case 10 -> {return "diez";}
+			default -> {return "null";}
 		}
-		
-		System.out.printf("%d = %s", nota, notaTexto);
 	}
 }

@@ -13,17 +13,19 @@ public class Ex3 {
 		System.out.print("Introduce un número: ");
 		int num = scan.nextInt();
 		
-		scan.close();
-		
 		boolean isEven = (num % 2 == 0);
-		
+
+		// Una forma bastante más compacta de hacerlo
+		//System.out.printf("%d es %s", num, (num % 2 == 0) ? "par" : "impar" );
+
 		if (isEven) {
 			System.out.printf("%n%d es par", num);
 		} else {
 			System.out.printf("%n%d es impar", num);
 		}
-		
-		// Una forma bastante más compacta de hacerlo
-		//System.out.printf("%d es %s", num, (num % 2 == 0) ? "par" : "impar" );
+
+		scan.close();
+
+
 	}
 }

@@ -10,27 +10,29 @@ public class Ex19Yimu {
 	
 		System.out.println("Introduce la 1ª minuscula");
 		char first = KB.nextLine().charAt(0);
+
 		System.out.println("Introduce la 2ª minuscula");
 		char second = KB.nextLine().charAt(0);
+
 		System.out.println("Introduce la 3ª minuscula");
 		char third = KB.nextLine().charAt(0);
 		
-		System.out.println("Ahora itroduce las veces que quieres desplazarlos en el alfabeto");
-		int t = KB.nextInt();
+		System.out.println("Introduce las veces que quieres desplazarlos a la derecha en el alfabeto");
+		int jumps = KB.nextInt();
 		
-		char c1 = (char)(t + first);
-		char c2 = (char)(t + second);
-		char c3 = (char)(t + third);
+		char c1 = (char)(jumps + first);
+		char c2 = (char)(jumps + second);
+		char c3 = (char)(jumps + third);
 		
-		char r1 = (char) (t - (122 - first) + 96);
-		char r2 = (char) (t - (122 - second) + 96);
-		char r3 = (char) (t - (122 - third) + 96);
+		char r1 = (char) (jumps - (122 - first) + 96);
+		char r2 = (char) (jumps - (122 - second) + 96);
+		char r3 = (char) (jumps - (122 - third) + 96);
 		
 		String result = "";
 		
-		if(t > 26) {
+		if(jumps > 26) {
 			System.err.println("Necesitas meter un numero mas pequeño");
-		} else if ((first < 97 || first > 122) || (second < 97 || second > 122) || (third < 97 || third > 122)) 
+		} else if ((first < 97 || first > 122) || (second < 97 || second > 122) || (third < 97 || third > 122))
 			System.err.println("Una de las letras no es minuscula / no es una letra");
 		
 		else if(c1 > 122 && c2 > 122 && c3 > 122)

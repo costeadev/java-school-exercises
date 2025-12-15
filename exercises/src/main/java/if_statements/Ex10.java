@@ -14,17 +14,17 @@ import java.util.Scanner;
 public class Ex10 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
+
+		System.out.println("--- MOSTRAR TIPO DE TRIBANGULO");
 		
-		System.out.print("Introduce la longitud del lado 1: ");
+		System.out.print("Longitud lado 1: ");
 		double side1 = scan.nextDouble();
-		
-		System.out.print("Introduce la longitud del lado 2: ");
+
+		System.out.print("Longitud lado 2: ");
 		double side2 = scan.nextDouble();
-		
-		System.out.print("Introduce la longitud del lado 3: ");
+
+		System.out.print("Longitud lado 3: ");
 		double side3 = scan.nextDouble();
-		
-		scan.close();
 	
 		// Find out biggest side
 		double biggest = side1;
@@ -48,5 +48,7 @@ public class Ex10 {
 		}
 		
 		System.out.printf("El triángulo es un triangulo %s", triangleType);
+
+		scan.close();
 	}
 }

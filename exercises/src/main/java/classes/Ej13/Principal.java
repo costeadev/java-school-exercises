@@ -1,4 +1,4 @@
-package classes.cafetera;
+package classes.Ej13;
 
 import java.util.Scanner;
 

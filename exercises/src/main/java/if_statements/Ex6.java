@@ -9,18 +9,20 @@ import java.util.Scanner;
 public class Ex6 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
+
+		System.out.println("--- ORDENAR 2 NUMEROS DE MENOR A MAYOR ---");
 		
-		System.out.print("Introduce un número: ");
+		System.out.print("Número 1: ");
 		int num1 = scan.nextInt();
 		
-		System.out.print("Introduce otro número: ");
+		System.out.print("Número 2: ");
 		int num2 = scan.nextInt();
 		
+		int smallest = (num1 < num2) ? num1 : num2;
+		int biggest = (num1 > num2) ? num1 : num2;
+		
+		System.out.printf("%d %d", smallest, biggest);
+
 		scan.close();
-		
-		int smaller = (num1 < num2) ? num1 : num2;
-		int bigger =  (num1 > num2) ? num1 : num2;
-		
-		System.out.printf("%d %d", smaller, bigger);
 	}
 }

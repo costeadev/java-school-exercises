@@ -11,19 +11,21 @@ import java.util.Scanner;
 public class Ex14 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
+
+		System.out.println("-- COMPROBAR SI UN NUMERO ES VALIDO ---");
 		
 		System.out.print("Introduce un número: ");
 		int num = scan.nextInt();
 		
-		scan.close();
-		
 		boolean isValid = (num > 0 && num < 100) || (num < -100);
 		
-		if (!isValid) {
+		if (isValid) {
+			System.out.printf("%d es un número válido", num);
+		} else {
 			System.err.println("El número introducido no es válido");
 			return;
-		} else {
-			System.out.printf("%d es un número válido", num);
 		}
+
+		scan.close();
 	}
 }

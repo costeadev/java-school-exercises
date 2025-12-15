@@ -10,14 +10,13 @@ import java.util.Scanner;
 public class Ex5 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
+
+		System.out.println("--- COMPROBAR SI UN NUMERO DE 3 CIFRAS ES CAPICUA ---");
 		
-		System.out.print("Introduce un número de 3 cifras: ");
+		System.out.print("Número de 3 cifras: ");
 		int num = scan.nextInt();
 		
-		scan.close();
-		
 		boolean validInput = (num >= 100 && num <= 999);
-		
 		if (!validInput) {
 			System.err.println("ERROR: el número debe tener 3 cifras.");
 			return;
@@ -36,5 +35,7 @@ public class Ex5 {
 			System.out.printf("%d --> %d%n", num, reversed);
 			System.out.printf("%d no es capicúa.%n", num);
 		}
+
+		scan.close();
 	}
 }

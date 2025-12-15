@@ -1,4 +1,4 @@
-package classes.prueba;
+package classes.Ej1;
 
 // 2.
 public class Prueba {

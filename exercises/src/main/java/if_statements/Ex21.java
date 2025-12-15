@@ -15,7 +15,8 @@ import java.util.Scanner;
 public class Ex21 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		
+
+		System.out.println("--- RESOLVER ECUACION CUADRATICA ---");
 		System.out.println("Esto es una ecuación cuadrática:");
 		System.out.println("ax^2 + bx + c = 0\n");
 		
@@ -28,21 +29,18 @@ public class Ex21 {
 		System.out.print("Introduce el valor de 'c': ");
 		double c = scan.nextDouble();
 		
-		scan.close();
-		
 		double determinant = Math.pow(b, 2) - 4 * a * c;
 		
 		if (determinant < 0) {
 			System.out.println("No hay soluciones reales");
 		} else if (determinant == 0) {
-			// Una única solución
 			double x = -b / (2*a);
-			
 		} else {
-			// Dos soluciones reales
 			double x1 = (-b + Math.sqrt(determinant)) / (2 * a);
 			double x2 = (-b - Math.sqrt(determinant)) / (2 * a);
 			System.out.printf("Las soluciones son x1 = %.2f y x2 = %.2f%n", x1, x2);
 		}
+
+		scan.close();
 	}
 }
