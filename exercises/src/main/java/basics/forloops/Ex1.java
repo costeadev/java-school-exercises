@@ -2,7 +2,7 @@ package basics.forloops;
 
 /*
  * Después de ejecutar el siguiente fragmento de programa
- * ¿cuál será el valor final de la variable x?
+ * ¿cuál será el value final de la variable x?
  */
 
 public class Ex1 {

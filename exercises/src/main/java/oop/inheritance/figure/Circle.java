@@ -1,7 +1,7 @@
 package oop.inheritance.figure;
 
 public class Circle extends Figure {
-    private double radius;
+    private final double radius;
 
     public Circle(double radius) {
         super("Circle", 0);

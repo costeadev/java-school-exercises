@@ -2,33 +2,24 @@ package lecture_tests;
 
 import java.util.Scanner;
 
+// Program which asks for a NAME and a NUMBER
+// Must show true if the NAME has more characters than the NUMBER
+// Else, show false
+
 public class IsNameBigger {
-	
-	// PROGRAMA QUE SOLICITE UN NOMBRE Y UN NUMERO
-	// EL PROGRAMA TIENE QUE MOSTRAR true SI EL NOMBRE
-	// TIENE MÁS CARACTERES QUE NÚMERO
-	// false EN CASO CONTRARIO
-	
-	public static void main(String[] args) {
-		
-		
-		// Scan name and number from the user
-		Scanner scan = new Scanner(System.in);
-		
-		System.out.print("Introduce un nombre: ");
-		String name = scan.nextLine();
-		
-		System.out.print("\nIntroduce un numero: ");
-		int number = scan.nextInt();
-		
-		scan.close();
-		
-		// Check is the name length is bigger than number
-		boolean isNameBigger = name.length() > number;
-		
-		// Print out the result :)
-		System.out.println("\nTiene el nombre más caracteres que número?: " + isNameBigger);
-		
-		
-	}
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Name: ");
+        String name = scanner.nextLine();
+
+        System.out.print("Number: ");
+        int number = scanner.nextInt();
+
+        boolean isNameBigger = name.length() > number;
+
+        System.out.println("\nIs the name bigger than the number?: " + isNameBigger);
+
+        scanner.close();
+    }
 }

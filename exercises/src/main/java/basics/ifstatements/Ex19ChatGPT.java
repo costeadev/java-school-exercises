@@ -3,66 +3,66 @@ package basics.ifstatements;
 import java.util.Scanner;
 
 /*
- * Recibe tres letras minúsculas y un int n 
- * Sustituye cada char con el char equivalente del alfabeto 
+ * Recibe tres letras minúsculas y un int n
+ * Sustituye cada char con el char equivalente del alfabeto
  * que se encuentra n posiciones después(si acaba el alfabeto, empieza desde el principio)
- * Por ejemplo si recibe ‘a’ ‘b’ ‘c’ 2 
+ * Por ejemplo si recibe ‘a’ ‘b’ ‘c’ 2
  * a --> 2 --> c
  * b --> 2 --> d
  * c --> 2 --> e
  */
 
 public class Ex19ChatGPT {
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
-		
-		System.out.print("Introduce una letra minúscula: ");
-		char char1 = scan.next().charAt(0);
-		
-		System.out.print("Introduce otra letra minúscula: ");
-		char char2 = scan.next().charAt(0);
-		
-		System.out.print("Introduce OTRA letra minúscula: ");
-		char char3 = scan.next().charAt(0);
-		
-		
-		int jumps = 0;
-		System.out.print("Introduce un número entero POSITIVO: ");
-		if (scan.hasNextInt()) {
-			jumps = scan.nextInt();
-		     if (jumps > Integer.MAX_VALUE - 122) {
-		        System.err.println("ERROR: El número es demasiado grande (máx permitido: " + (Integer.MAX_VALUE - 122) + ")");
-		        return;
-		    }
-		} else {
-			System.err.println("ERROR: El número es demasiado grande");
-			return;
-		}
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-		// Comprobar que el número sea un char ASCII mínuscula y que no sea negativo
-		if (jumps < 0) {
-			System.err.println("ERROR: El número debe ser positivo.");
-		}
+        System.out.print("Introduce una letra minúscula: ");
+        char char1 = scanner.next().charAt(0);
 
-		boolean validLowercase = (char1 >= 97 && char1 <= 122) && (char2 >= 97 && char2 <= 122) && (char3 >= 97 && char3 <= 122);
-		if (!validLowercase) {
-			System.err.println("ERROR: Valor no válido, deben ser letras minúsculas de (a-z)");
-			return;
-		}
+        System.out.print("Introduce otra letra minúscula: ");
+        char char2 = scanner.next().charAt(0);
 
-		// 100   +  50  = 150 2 * 26 = 52   150- 52 = 98
-		// 97-122 26 letras (0 veces)
-		// 123-148 26 letras (1 vez)
-		// 149-174 26 letras (2 veces)
+        System.out.print("Introduce OTRA letra minúscula: ");
+        char char3 = scanner.next().charAt(0);
 
-		int newChar1 = ((char1 + jumps - 'a') % 26) + 'a';
-		int newChar2 = ((char2 + jumps - 'a') % 26) + 'a';
-		int newChar3 = ((char3 + jumps - 'a') % 26) + 'a';
 
-		System.out.printf("%c --> %d --> %c", char1, jumps, newChar1);
-		System.out.printf("%c --> %d --> %c", char2, jumps, newChar2);
-		System.out.printf("%c --> %d --> %c", char3, jumps, newChar3);
+        int jumps = 0;
+        System.out.print("Introduce un number entero POSITIVO: ");
+        if (scanner.hasNextInt()) {
+            jumps = scanner.nextInt();
+            if (jumps > Integer.MAX_VALUE - 122) {
+                System.err.println("ERROR: El number es demasiado grande (máx permitido: " + (Integer.MAX_VALUE - 122) + ")");
+                return;
+            }
+        } else {
+            System.err.println("ERROR: El number es demasiado grande");
+            return;
+        }
 
-		scan.close();
-	}
+        // Comprobar que el number sea un char ASCII mínuscula y que no sea negativo
+        if (jumps < 0) {
+            System.err.println("ERROR: El number debe ser positivo.");
+        }
+
+        boolean validLowercase = (char1 >= 97 && char1 <= 122) && (char2 >= 97 && char2 <= 122) && (char3 >= 97 && char3 <= 122);
+        if (!validLowercase) {
+            System.err.println("ERROR: value no válido, deben ser letras minúsculas de (a-z)");
+            return;
+        }
+
+        // 100   +  50  = 150 2 * 26 = 52   150- 52 = 98
+        // 97-122 26 letras (0 veces)
+        // 123-148 26 letras (1 vez)
+        // 149-174 26 letras (2 veces)
+
+        int newChar1 = ((char1 + jumps - 'a') % 26) + 'a';
+        int newChar2 = ((char2 + jumps - 'a') % 26) + 'a';
+        int newChar3 = ((char3 + jumps - 'a') % 26) + 'a';
+
+        System.out.printf("%c --> %d --> %c", char1, jumps, newChar1);
+        System.out.printf("%c --> %d --> %c", char2, jumps, newChar2);
+        System.out.printf("%c --> %d --> %c", char3, jumps, newChar3);
+
+        scanner.close();
+    }
 }

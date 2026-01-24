@@ -2,12 +2,12 @@ package oop.classes.Ej21;
 
 public class Departamento {
 
-    private String nombre;
+    private final String name;
     private Empleado director;
     private Empleado[] empleados;
 
-    Departamento(String nombre, Empleado director, Empleado[] empleados) {
-        this.nombre = nombre;
+    Departamento(String name, Empleado director, Empleado[] empleados) {
+        this.name = name;
         this.empleados = empleados;
 
         // Ensure director is an employee
@@ -27,8 +27,8 @@ public class Departamento {
         director.setDepartamento(this);
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getname() {
+        return name;
     }
 
     public Empleado getDirector() {
@@ -55,9 +55,7 @@ public class Departamento {
         }
 
         Empleado[] newArray = new Empleado[empleados.length + 1];
-        for (int i = 0; i < empleados.length; i++) {
-            newArray[i] = empleados[i];
-        }
+        System.arraycopy(empleados, 0, newArray, 0, empleados.length);
         newArray[empleados.length] = newEmpleado;
         empleados = newArray;
 
@@ -77,7 +75,7 @@ public class Departamento {
         for (Empleado empleado : empleados) {
             sb.append(empleado.getNif())
                     .append(" - ")
-                    .append(empleado.getNombre())
+                    .append(empleado.getname())
                     .append("\n");
         }
         return sb.toString();
@@ -86,13 +84,13 @@ public class Departamento {
     @Override
     public String toString() {
         return String.format("""
-                Nombre: %s
-                Director: %s
-                Empleados: 
-                %s
-                """,
-                nombre,
-                director.getNombre(),
+                        name: %s
+                        Director: %s
+                        Empleados: 
+                        %s
+                        """,
+                name,
+                director.getname(),
                 listarEmpleados()
         );
     }

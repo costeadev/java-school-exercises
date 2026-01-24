@@ -6,24 +6,24 @@ public class MockExam3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Cuantas palabras quieres añadir al array?: ");
-        int arraySize = scanner.nextInt();
+        System.out.print("How many words do you wish to add to the array?: ");
+        int size = scanner.nextInt();
         scanner.nextLine(); // Clean buffer
 
-        String[] words = new String[arraySize];
+        String[] words = new String[size];
         for (int i = 0; i < words.length; i++) {
-            System.out.print("Introduce una palabra: ");
+            System.out.printf("Word %d: ", i + 1);
             words[i] = scanner.nextLine().trim();
         }
 
         // Print results
-        String[] filteredWords = eliminarLargas(words);
+        String[] filteredWords = removeLongWords(words);
         for (String word : filteredWords) {
             System.out.printf("[%s] ", word);
         }
     }
 
-    public static String[] eliminarLargas(String[] words) {
+    public static String[] removeLongWords(String[] words) {
         int totalLength = 0;
         for (String word : words) {
             totalLength += word.length();

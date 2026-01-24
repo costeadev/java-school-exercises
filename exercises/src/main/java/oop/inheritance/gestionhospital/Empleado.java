@@ -1,30 +1,30 @@
 package oop.inheritance.gestionhospital;
 
 public abstract class Empleado {
-    private String nombre;
-    private String dni;
+    private String name;
+    private String id;
     private double salarioBase;
 
-    public Empleado(String nombre, String dni, double salarioBase) {
-        this.nombre = nombre;
-        this.dni = dni;
+    public Empleado(String name, String id, double salarioBase) {
+        this.name = name;
+        this.id = id;
         this.salarioBase = salarioBase;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getname() {
+        return name;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setname(String name) {
+        this.name = name;
     }
 
-    public String getDni() {
-        return dni;
+    public String getid() {
+        return id;
     }
 
-    public void setDni(String dni) {
-        this.dni = dni;
+    public void setid(String id) {
+        this.id = id;
     }
 
     public double getSalarioBase() {
@@ -39,8 +39,8 @@ public abstract class Empleado {
 
     public void mostrarDatos() {
         System.out.printf("""
-                Nombre: %s/ DNI: %s/ Salario base: %.2f€
-                """, nombre, dni, calcularSalario());
+                name: %s/ id: %s/ Salario base: %.2f€
+                """, name, id, calcularSalario());
     }
 }
 

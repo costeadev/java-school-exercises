@@ -1,6 +1,7 @@
 # Company Management App
 
 ## Overview
+
 Simple Java console application to manage employees, departments, and salaries using OOP principles.
 
 ---
@@ -18,59 +19,73 @@ Simple Java console application to manage employees, departments, and salaries u
 ## Class Model
 
 ### Employee
+
 Represents a generic employee of the company.
 
 **Responsibilities:**
+
 - Store employee personal data
 - Provide salary information
 - Own a unique auto-generated identifier
 
 **Attributes:**
+
 - `id` : int - unique identifier (auto-generated)
 - `name` : String
 - `salary` : double
 - `hireDate` : LocalDate
 
 **Methods:**
+
 - `getSalary()` : double
 
 ---
 
 ### Manager (extends Employee)
+
 Represents an employee with an additional salary bonus.
 
 **Responsibilities:**
+
 - Extend `Employee` salary logic with a bonus.
 
-**Attributes:** 
+**Attributes:**
+
 - `salaryBonus` : double
 
 ---
 
 ### TempEmployee (extends Employee)
+
 Represents an employee with limited-time contract.
 
 **Responsibilities:**
+
 - Store contract termination date.
 
 **Attributes:**
+
 - `termDate` : LocalDate
 
 ---
 
 ### Department
+
 Groups employees and calculates department-level salary.
 
 **Responsibilities:**
+
 - Create and delete employees and store them in a collection.
 - Calculate total salary of its employees.
 
 **Attributes:**
+
 - `id` : int - unique identifier (auto-generated)
 - `name` : String
 - `employees` : Employee[]
 
 **Methods:**
+
 - `createEmployee(String name, double salary, LocalDate hireDate)`: Employee
 - `addEmployee(Employee e)` : void
 - `deleteEmployee(int id)`; : void
@@ -79,19 +94,23 @@ Groups employees and calculates department-level salary.
 ---
 
 ### Company
+
 Aggregates departments and provides global salary logic.
 
 **Responsibilities:**
+
 - Create and delete departments and store them in a collection.
 - Calculate company-wide salary.
 - Identify the department with the highest salary.
 
 **Attributes:**
+
 - `id` : int - unique identifier (auto-generated)
 - `name` : String
 - `departments` : Department[]
- 
+
 **Methods:**
+
 - `createDepartment(String name)` : Department
 - `addDepartment(Department d)` : void
 - `deleteDepartment(int id)` : void
@@ -113,16 +132,18 @@ Aggregates departments and provides global salary logic.
 ### Main Menu
 
 === MAIN MENU ===
+
 1. *Create* -> lets the user create Employees, Departments, or Companies.
 2. *Delete* -> removes entities recursively if needed.
 3. *List / Show* -> displays information about existing entities.
 0. *Exit* -> finishes the program.
 
 > Note: Menus are implemented in separate methods (`printMainMenu()`, `printCreateMenu()`, etc.)
-to keep the `main()` method clean and maintainable. 
-The bootstrap method (`bootstrapCompany()`) initializes the starting company and departments.
+> to keep the `main()` method clean and maintainable.
+> The bootstrap method (`bootstrapCompany()`) initializes the starting company and departments.
 
 ---
 
 ## How to Run
+
 Compile and run the Main class.

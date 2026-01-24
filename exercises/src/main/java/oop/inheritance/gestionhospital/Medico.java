@@ -1,21 +1,21 @@
 package oop.inheritance.gestionhospital;
 
 public class Medico extends Empleado {
-    private String especialidad;
-    private int numeroGuardias;
+    private final String especialidad;
+    private final int numberGuardias;
 
-    public Medico(String nombre,
-                  String dni,
+    public Medico(String name,
+                  String id,
                   double salarioBase,
                   String especialidad,
-                  int numeroGuardias) {
-       super(nombre, dni, salarioBase);
-       this.especialidad = especialidad;
-       this.numeroGuardias = numeroGuardias;
+                  int numberGuardias) {
+        super(name, id, salarioBase);
+        this.especialidad = especialidad;
+        this.numberGuardias = numberGuardias;
     }
 
     @Override
     public double calcularSalario() {
-        return getSalarioBase() + (numeroGuardias * 50);
+        return getSalarioBase() + (numberGuardias * 50);
     }
 }

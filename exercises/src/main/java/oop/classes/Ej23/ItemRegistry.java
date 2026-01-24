@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Objects;
 
 public class ItemRegistry {
-    private static List<Item> items = new ArrayList<>();
+    private static final List<Item> items = new ArrayList<>();
 
     public static List<Item> getItems() {
         return items;

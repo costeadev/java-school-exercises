@@ -4,19 +4,19 @@ public final class Asignatura {
 
     private static final int NOTA_NO_CALIFICADA = -1;
 
-    private final String nombre;
+    private final String name;
     private final Curso curso;
     private int nota;
 
 
-    public Asignatura(String nombre, Curso curso, int nota) {
-        this.nombre = nombre;
+    public Asignatura(String name, Curso curso, int nota) {
+        this.name = name;
         this.curso = curso;
         this.nota = validarNota(nota) ? nota : NOTA_NO_CALIFICADA;
     }
 
-    public Asignatura(String nombre, Curso curso) {
-        this(nombre, curso, NOTA_NO_CALIFICADA);
+    public Asignatura(String name, Curso curso) {
+        this(name, curso, NOTA_NO_CALIFICADA);
     }
 
     public void califica(int nota) {
@@ -33,7 +33,7 @@ public final class Asignatura {
 
     @Override
     public String toString() {
-        String notaStr = (nota == NOTA_NO_CALIFICADA) ?  "No calificada" : String.valueOf(nota);
-        return String.format("Nombre: %s%nCurso: %s%nNota: %s", nombre, curso, notaStr);
+        String notaStr = (nota == NOTA_NO_CALIFICADA) ? "No calificada" : String.valueOf(nota);
+        return String.format("name: %s%nCurso: %s%nNota: %s", name, curso, notaStr);
     }
 }

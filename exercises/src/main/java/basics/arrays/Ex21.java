@@ -27,16 +27,19 @@ public class Ex21 {
             chars[i] = c;
         }
         scanner.close();
-        
+
         // Check if they are ordered alphabetically
         boolean sorted = true;
         for (int i = 1; i < chars.length && sorted; i++) {
-             if (chars[i] < chars[i - 1]) sorted = false;
+            if (chars[i] < chars[i - 1]) {
+                sorted = false;
+                break;
+            }
         }
 
         // Print result
         System.out.println(sorted
-            ? "La lista estaba ordenada alfabeticamente :)"
-            : "La lista NO estaba ordenada alfabeticamente :(");
+                ? "La lista estaba ordenada alfabeticamente :)"
+                : "La lista NO estaba ordenada alfabeticamente :(");
     }
 }

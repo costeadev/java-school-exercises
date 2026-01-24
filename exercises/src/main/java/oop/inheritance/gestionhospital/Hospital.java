@@ -10,7 +10,7 @@ public class Hospital {
     }
 
     public void agregarEmpleado(Empleado e) {
-        if (buscarEmpleadoPorDni(e.getDni()) != null) {
+        if (buscarEmpleadoPorid(e.getid()) != null) {
             throw new IllegalArgumentException("Empleado ya existe");
         }
         // Add nueva posicion al array
@@ -34,9 +34,9 @@ public class Hospital {
         return total;
     }
 
-    private Empleado buscarEmpleadoPorDni(String dni) {
+    private Empleado buscarEmpleadoPorid(String id) {
         for (Empleado e : empleados) {
-            if (e.getDni().equals(dni)) return e;
+            if (e.getid().equals(id)) return e;
         }
         return null;
     }

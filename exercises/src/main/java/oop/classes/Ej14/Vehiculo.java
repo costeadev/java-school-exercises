@@ -1,7 +1,7 @@
 package oop.classes.Ej14;
 
 public class Vehiculo {
-    private double gastoPorKm;
+    private final double gastoPorKm;
 
     // Constructor
     public Vehiculo(double gastoPorKm) {

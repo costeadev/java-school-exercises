@@ -3,18 +3,20 @@ package lecture_tests;
 import java.util.Scanner;
 
 public class IfStatement {
-	public static void main(String[] args) {
-		
-		Scanner scan = new Scanner(System.in);
-		
-		System.out.print("Introduce un número: ");
-		int n = scan.nextInt();
-		
-		// Manera normal
-		if (n < 0) System.out.println("Numero no valido");
+    public static void main(String[] args) {
 
-		// MANERA MALVADA
-		if (n < 0) 
-			System.out.println("Numero no valido");
-	}
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Number: ");
+        int n = scanner.nextInt();
+
+        // Good way
+        if (n < 0) {
+            System.out.println("Non-valid number");
+        }
+
+        // EVIL WAY
+        if (n < 0)
+            System.out.println("Non-valid number");
+    }
 }

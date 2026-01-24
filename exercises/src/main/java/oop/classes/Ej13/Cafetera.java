@@ -20,15 +20,15 @@ public class Cafetera {
         return maxCapacity;
     }
 
-    public int getCurrentLevel() {
-        return currentLevel;
-    }
-
     // Setters
     public void setMaxCapacity(int capacity) {
         if (capacity < 0) return;
         maxCapacity = capacity;
         currentLevel = Math.min(currentLevel, maxCapacity);
+    }
+
+    public int getCurrentLevel() {
+        return currentLevel;
     }
 
     public void setCurrentLevel(int level) {

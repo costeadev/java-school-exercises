@@ -26,7 +26,7 @@ public class Ex23 {
         System.out.println();
 
         if (choice == 1) {
-            fillArrayRandomly(numbers, scanner); 
+            fillArrayRandomly(numbers, scanner);
         }
         if (choice == 2) {
             fillArrayFromInput(numbers, scanner);
@@ -50,7 +50,7 @@ public class Ex23 {
 
     private static void fillArrayFromInput(int[] array, Scanner sc) {
         for (int i = 0; i < array.length; i++) {
-            System.out.printf("Introduce el numero en posicion %d: ", i + 1);
+            System.out.printf("Introduce el number en posicion %d: ", i + 1);
             array[i] = sc.nextInt();
         }
     }
@@ -67,7 +67,7 @@ public class Ex23 {
             end = sc.nextInt();
         } while (end <= start);
 
-        for (int i = 0; i< array.length; i++) {
+        for (int i = 0; i < array.length; i++) {
             array[i] = rand.nextInt(end - start + 1) + start;
         }
     }

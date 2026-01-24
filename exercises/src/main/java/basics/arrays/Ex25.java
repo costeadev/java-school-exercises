@@ -5,16 +5,16 @@ import java.util.Scanner;
 
 public class Ex25 {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
         System.out.print("Cuantas palabras quieres leer?: ");
-        int size = scan.nextInt();
-        scan.nextLine(); // Clear buffer
+        int size = scanner.nextInt();
+        scanner.nextLine(); // Clear buffer
 
         String[] words = new String[size];
         for (int i = 0; i < words.length; i++) {
             System.out.printf("Introduce la palabra en posicion %d: ", i + 1);
-            words[i] = scan.nextLine();
+            words[i] = scanner.nextLine();
         }
 
         // Quitar duplicados
@@ -44,9 +44,9 @@ public class Ex25 {
         }
 
         // Imprimir con formato bonito
-        System.out.printf("\nAntes: %s",Arrays.toString(words));
-        System.out.printf("\nDespues: %s",Arrays.toString(uniqueWords));
+        System.out.printf("\nAntes: %s", Arrays.toString(words));
+        System.out.printf("\nDespues: %s", Arrays.toString(uniqueWords));
 
-        scan.close();
+        scanner.close();
     }
 }

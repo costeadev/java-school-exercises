@@ -4,7 +4,7 @@ public class Pedido {
 
     private String descripcion;
     private double precio;
-    private String codigo;
+    private final String codigo;
 
     public Pedido(String descripcion, double precio, String codigo) {
         this.descripcion = descripcion;

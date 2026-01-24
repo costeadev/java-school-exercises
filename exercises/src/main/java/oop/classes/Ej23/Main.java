@@ -10,7 +10,7 @@ public class Main {
         do {
             printMenu();
             option = Keyboard.readInt("Choose an option: ");
-            
+
             switch (option) {
                 case 1 -> { // Create item
                     Item item = createItem();

@@ -1,7 +1,7 @@
 package oop.inheritance.figure;
 
 public class Square extends Figure {
-    private double side;
+    private final double side;
 
     public Square(double side) {
         super("Square", 4);

@@ -1,11 +1,11 @@
 package oop.classes.Ej15;
 
 public class Partitura {
-    private String autor;
+    private final String autor;
     private String instrumento;
     private int tempo;
 
-    public Partitura(String autor, String instrumento, int tempo){
+    public Partitura(String autor, String instrumento, int tempo) {
         this.autor = autor;
         this.instrumento = instrumento;
         this.tempo = tempo;
@@ -24,7 +24,7 @@ public class Partitura {
     }
 
     public void addInstrumento(String instrumento) {
-        this.instrumento += String.format(", %s",instrumento);
+        this.instrumento += String.format(", %s", instrumento);
     }
 
     public int cuentaInstrumentos() {

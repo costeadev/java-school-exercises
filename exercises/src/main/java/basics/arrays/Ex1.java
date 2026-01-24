@@ -2,11 +2,11 @@ package basics.arrays;
 
 import java.util.Scanner;
 
-/**
- * Leer 5 numeros
- * - Mostrarlos al derecho
- * - Mostrarlos al reves
- */
+ // Read 5 numbers
+ // - Show them forwards
+ // - Show them backwards
+
+
 public class Ex1 {
     public static void main(String[] args) {
 
@@ -15,21 +15,19 @@ public class Ex1 {
 
         // Read 5 numbers
         for (int i = 0; i < numbers.length; i++) {
-            System.out.print("Introduce un numero: ");
+            System.out.print("Number: ");
             numbers[i] = scanner.nextInt();
         }
         scanner.close();
 
-        // Forward
-        System.out.print("Normal: ");
+        System.out.print("Forwards: ");
         for (int num : numbers) {
             System.out.printf("%d ", num);
         }
 
         System.out.println();
 
-        // Backwards
-        System.out.print("Reverso: ");
+        System.out.print("Backwards: ");
         for (int i = numbers.length - 1; i >= 0; i--) {
             System.out.printf("%d ", numbers[i]);
         }

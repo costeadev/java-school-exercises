@@ -14,7 +14,7 @@ public class Ex10 {
 
         int[] numbers = new int[6];
         for (int i = 0; i < numbers.length; i++) {
-            System.out.printf("Introduce el numero %d: ", i + 1);
+            System.out.printf("Introduce el number %d: ", i + 1);
             numbers[i] = scanner.nextInt();
         }
         scanner.close();

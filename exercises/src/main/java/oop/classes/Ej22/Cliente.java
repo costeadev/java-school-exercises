@@ -2,12 +2,12 @@ package oop.classes.Ej22;
 
 public class Cliente {
 
-    private String nombre;
-    private String nif;
-    private String[] codigosPedidos;
+    private final String name;
+    private final String nif;
+    private final String[] codigosPedidos;
 
-    public Cliente(String nombre, String nif) {
-        this.nombre = nombre;
+    public Cliente(String name, String nif) {
+        this.name = name;
         this.nif = nif;
         codigosPedidos = new String[10];
     }
@@ -39,9 +39,9 @@ public class Cliente {
     @Override
     public String toString() {
         return String.format("""
-                Nombre: %s
+                name: %s
                 NIF: %s
                 Pedidos: %d
-                """, nombre, nif, getPedidosCount());
+                """, name, nif, getPedidosCount());
     }
 }

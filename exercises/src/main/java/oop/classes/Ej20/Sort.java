@@ -2,11 +2,11 @@ package oop.classes.Ej20;
 
 public class Sort {
     static int partition(Pais[] arr, int low, int high) {
-        int pivot = arr[high].getHabitantes();
+        int pivot = arr[high].habitantes();
         int i = low - 1;
 
         for (int j = low; j <= high - 1; j++) {
-            if (arr[j].getHabitantes() > pivot) {
+            if (arr[j].habitantes() > pivot) {
                 i++;
                 swap(arr, i, j);
             }

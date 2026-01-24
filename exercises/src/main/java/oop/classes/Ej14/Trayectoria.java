@@ -1,7 +1,7 @@
 package oop.classes.Ej14;
 
 public class Trayectoria {
-    private Punto[] puntos;
+    private final Punto[] puntos;
 
     // Constructor
     public Trayectoria(Punto[] puntos) {

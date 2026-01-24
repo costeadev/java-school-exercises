@@ -3,7 +3,7 @@ package basics.arrays;
 import java.util.Scanner;
 
 /**
- * Leer 10 numeros enteros.
+ * Leer 10 numbers enteros.
  * Mostrarlos en orden:
  * primero-ultimo
  * segundo-penultimo
@@ -19,9 +19,9 @@ public class Ex5 {
         int[] numbers = new int[arraySize];
 
         // Read numbers from user
-        System.out.printf("--- DEBES INTRODUCIR %d NUMEROS ---%n", arraySize);
+        System.out.printf("--- DEBES INTRODUCIR %d numberS ---%n", arraySize);
         for (int i = 0; i < numbers.length; i++) {
-            System.out.printf("Introduce el numero en posicion %d: ", i + 1);
+            System.out.printf("Introduce el number en posicion %d: ", i + 1);
             numbers[i] = scanner.nextInt();
         }
         scanner.close();

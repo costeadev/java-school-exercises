@@ -11,12 +11,12 @@ public class Ex17 {
         int[] numArray = new int[6];
         int elementsToRead = numArray.length - 1;
         for (int i = 0; i < elementsToRead; i++) {
-            System.out.print("Introduce un numero: ");
+            System.out.print("Introduce un number: ");
             numArray[i] = scanner.nextInt();
         }
 
         // Read and store the number to add
-        System.out.print("Introduce otro numero: ");
+        System.out.print("Introduce otro number: ");
         int numToAdd = scanner.nextInt();
 
         scanner.close();

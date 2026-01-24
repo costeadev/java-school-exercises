@@ -4,8 +4,8 @@ public class Item {
     private static int NEXT_ID = 1;
 
     private final int id;
-    private String name;
-    private double price;
+    private final String name;
+    private final double price;
 
     public Item(String name, double price) {
         this.id = NEXT_ID++;

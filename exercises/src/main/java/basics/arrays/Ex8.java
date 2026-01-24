@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /**
- * Leer por teclado 2 arrays de 5 numeros enteros.
+ * Leer por teclado 2 arrays de 5 numbers enteros.
  * Mezclarlos en un 3er array de forma:
  * 1er num del A, 1er num del B, 2ndo num del A, 2ndo num del B.
  */
@@ -19,7 +19,7 @@ public class Ex8 {
         // Read first array
         int[] firstArray = new int[arraySize];
         for (int i = 0; i < arraySize; i++) {
-            System.out.printf("Introduce el numero %d del array 1: ", i + 1);
+            System.out.printf("Introduce el number %d del array 1: ", i + 1);
             firstArray[i] = scanner.nextInt();
         }
 
@@ -28,7 +28,7 @@ public class Ex8 {
         // Read second array
         int[] secondArray = new int[arraySize];
         for (int i = 0; i < arraySize; i++) {
-            System.out.printf("Introduce el numero %d del array 2: ", i + 1);
+            System.out.printf("Introduce el number %d del array 2: ", i + 1);
             secondArray[i] = scanner.nextInt();
         }
         scanner.close();

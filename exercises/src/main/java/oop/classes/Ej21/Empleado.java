@@ -2,14 +2,14 @@ package oop.classes.Ej21;
 
 public class Empleado {
 
-    private String nif;
-    private String nombre;
+    private final String nif;
+    private final String name;
     private double sueldo;
     private Departamento departamento;
 
-    public Empleado(String nif, String nombre, double sueldo) {
+    public Empleado(String nif, String name, double sueldo) {
         this.nif = nif;
-        this.nombre = nombre;
+        this.name = name;
 
         if (sueldo <= 0) {
             throw new IllegalArgumentException("El sueldo debe ser positivo");
@@ -21,8 +21,8 @@ public class Empleado {
         return nif;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getname() {
+        return name;
     }
 
     public double getSueldo() {
@@ -47,15 +47,15 @@ public class Empleado {
     @Override
     public String toString() {
         return String.format("""
-                NIF: %s
-                Nombre: %s
-                Sueldo: %.2f€
-                Departamento: %s
-                """,
+                        NIF: %s
+                        name: %s
+                        Sueldo: %.2f€
+                        Departamento: %s
+                        """,
                 nif,
-                nombre,
+                name,
                 sueldo,
-                (departamento != null) ? departamento.getNombre() : "Sin departamento"
+                (departamento != null) ? departamento.getname() : "Sin departamento"
         );
     }
 }

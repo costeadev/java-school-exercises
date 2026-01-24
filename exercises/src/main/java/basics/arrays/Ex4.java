@@ -3,24 +3,24 @@ package basics.arrays;
 import java.util.Scanner;
 
 /**
- * Leer una cantidad de numeros por teclado
+ * Leer una cantidad de numbers por teclado
  * (La cantidad la debe introducir el usuario)
- * De esos numeros, devolver:
- *   - Media positivos
- *   - Media negativos
- *   - Cantidad de ceros
+ * De esos numbers, devolver:
+ * - Media positivos
+ * - Media negativos
+ * - Cantidad de ceros
  */
 
 public class Ex4 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Cuantos numeros quieres leer?: ");
+        System.out.print("Cuantos numbers quieres leer?: ");
         int numbersToRead = scanner.nextInt();
 
         int[] numbers = new int[numbersToRead];
         for (int i = 0; i < numbers.length; i++) {
-            System.out.printf("Introduce el numero en posicion %d: ", i + 1);
+            System.out.printf("Introduce el number en posicion %d: ", i + 1);
             numbers[i] = scanner.nextInt();
         }
         scanner.close();

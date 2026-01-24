@@ -12,7 +12,7 @@ public class Ex2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Cuantos numeros quieres leer?: ");
+        System.out.print("Cuantos numbers quieres leer?: ");
         int arraySize = scanner.nextInt();
         scanner.nextLine(); // Clean buffer
 

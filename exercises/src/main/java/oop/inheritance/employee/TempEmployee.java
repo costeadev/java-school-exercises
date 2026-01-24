@@ -3,7 +3,7 @@ package oop.inheritance.employee;
 import java.time.LocalDate;
 
 public class TempEmployee extends Employee {
-    private LocalDate termDate;
+    private final LocalDate termDate;
 
     public TempEmployee(String name, double salary, LocalDate hireDate, LocalDate termDate) {
         super(name, salary, hireDate);

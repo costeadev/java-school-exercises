@@ -1,67 +1,64 @@
 package lecture_tests;
 
 public class CountTest {
-	
-	public static void main(String[] args) {
+
+    public static void main(String[] args) {
 		
 /*
- * 		// Leemos por teclado totalUsuarios y nuevosUsuarios
-		Scanner scan = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		
 		double num = 7.2 % 2.5;
 		
 		System.out.println(num);
 		
-		System.out.print("\nIntroduzca número de usuarios totales: ");
-		int totalUsuarios = scan.nextInt();
+		System.out.print("\Total number of users: ");
+		int userTotal = scanner.nextInt();
 		
-		System.out.print("Introduzca número de usuarios nuevos: ");
-		int nuevosUsuarios = scan.nextInt();
+		System.out.print("Introduzca number de usuarios nuevos: ");
+		int newUsers = scanner.nextInt();
 		
-		scan.close();
+		scanner.close();
 		
 		
-		// Sumar nuevosUsuarios a totalUsuarios
-		totalUsuarios = totalUsuarios + nuevosUsuarios; // Método 1
-		totalUsuarios += nuevosUsuarios; // Método 2
-		totalUsuarios -= nuevosUsuarios; // Se puede hacer con cualquier otro operador 
+		// Sumar newUsers a userTotal
+		userTotal = userTotal + newUsers; // Method 1
+		userTotal += newUsers; // Method 2
+		userTotal -= newUsers; // You could do it with any operator
 
-		System.out.println("\nEl nuevo total de usuarios será: " + totalUsuarios);
+		System.out.println("\The new total of users will be: " + userTotal);
 		
-		// Operador + con String
-		String nombre1 = "Jose ";
-		String nombre2 = "María ";
+		// + operator with String
+		String name1 = "Jose ";
+		String name2 = "María ";
 		
-		String nombre3 = nombre1 + nombre2; // Concatenamos los nombres
-		System.out.println("\n" + nombre3);
+		String name3 = name1 + name2; // We concatenate the names
+		System.out.println("\n" + name3);
 		
-		// También funciona entre STRING y otro tipo
-		nombre1 = nombre1 + num;
-		System.out.println(nombre1);
+		// Also works witth String and other type
+		name1 = name1 + num;
+		System.out.println(name1);
 		
 		
-		// Sumar +1 a un contador
-		int contador = 0;
+		// Add +1 to a count
+		int count = 0;
 		
-		contador = contador + 1; // Método 1
-		contador += 1; // Método 2
-		contador++; // Método 3
+		count = count + 1; // Method 1
+		count += 1; // Method 2
+		count++; // Method 3
 		*/
-		
-		int contador = 0;
-		System.out.println("Contador: " + contador);
-		
-		int numero1 = contador++ + 3; // contador++ + 3  PRIMERO SUMA Y LUEGO INCREMENTA
-		System.out.println("\nNumero 1: " + numero1);
-		System.out.println("Contador: " + contador);
-		
-		int numero2 = ++contador + 3; // ++contador + 3  PRIMERO INCREMENTA Y LUEGO SUMA
-		System.out.println("\nNumero 2: " + numero2);
-		System.out.println("Contador: " + contador);
-		
-		int a = 5, b = 8, c = 12, d = 3;
-		System.out.println(++a + b-- - --c + d++ * a-- - ++b + c++ / --d);
-		
-		
-	}
+
+        int count = 0;
+        System.out.println("count: " + count);
+
+        int number1 = count++ + 3; // First adds, then increments
+        System.out.println("\nNumber 1: " + number1);
+        System.out.println("Count: " + count);
+
+        int number2 = ++count + 3; // First increments, then adds
+        System.out.println("\nNumber 2: " + number2);
+        System.out.println("Count: " + count);
+
+        int a = 5, b = 8, c = 12, d = 3;
+        System.out.println(++a + b-- - --c + d++ * a-- - ++b + c++ / --d);
+    }
 }

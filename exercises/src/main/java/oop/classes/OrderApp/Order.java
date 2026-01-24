@@ -6,14 +6,24 @@ import java.util.Objects;
 
 public class Order {
     private static int NEXT_ID = 1;
-
-    private final int id;
-    private List<Item> items;
     private static double iva = 21;
+    private final int id;
+    private final List<Item> items;
 
     public Order() {
         this.id = NEXT_ID++;
         this.items = new ArrayList<>();
+    }
+
+    public static double getIVA() {
+        return iva;
+    }
+
+    public static void setIVA(double newIVA) {
+        if (newIVA < 0) {
+            throw new RuntimeException("New VAT must be positive");
+        }
+        iva = newIVA;
     }
 
     public int getId() {
@@ -51,17 +61,6 @@ public class Order {
         if (!removed) {
             throw new RuntimeException("Item couldn't be found");
         }
-    }
-
-    public static double getIVA() {
-        return iva;
-    }
-
-    public static void setIVA(double newIVA) {
-        if (newIVA < 0) {
-            throw new RuntimeException("New VAT must be positive");
-        }
-        iva = newIVA;
     }
 
     @Override

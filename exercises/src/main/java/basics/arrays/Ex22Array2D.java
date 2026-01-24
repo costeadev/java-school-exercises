@@ -4,11 +4,11 @@ import java.util.Scanner;
 
 /**
  * Queremos desarrollar una aplicación que nos ayude a gestionar las notas de un centro educativo.
- * Cada grupo (o clase) está compuesto por 5 alumnos.
+ * Cada grupo (o clase) está compuesto por 5 students.
  * Se pide leer las notas del primer, segundo y tercer trimestre de un grupo.
  * Debemos mostrar al final:
- *   - La nota media del grupo en cada trimestre
- *   - La media del alumno que se encuentra en la posición N (N se lee por teclado).
+ * - La nota media del grupo en cada trimestre
+ * - La media del student que se encuentra en la posición N (N se lee por teclado).
  */
 
 public class Ex22Array2D {
@@ -23,8 +23,8 @@ public class Ex22Array2D {
             for (int j = 0; j < students; j++) {
                 double grade;
                 do {
-                    System.out.printf("Introduce nota del trimestre %d para alumno %d: ", i + 1, j + 1);
-                     grade = scanner.nextDouble();
+                    System.out.printf("Introduce nota del trimestre %d para student %d: ", i + 1, j + 1);
+                    grade = scanner.nextDouble();
                 } while (grade < 0 || grade > 10);
                 gradesPerTrimester[i][j] = grade;
             }
@@ -53,7 +53,7 @@ public class Ex22Array2D {
         for (int i = 0; i < trimesters; i++) {
             selectedStudentTotal += gradesPerTrimester[i][selectedStudent];
         }
-        System.out.printf("Media estudiante %d: %.2f",  selectedStudent + 1, selectedStudentTotal / trimesters);
+        System.out.printf("Media estudiante %d: %.2f", selectedStudent + 1, selectedStudentTotal / trimesters);
 
     }
 }

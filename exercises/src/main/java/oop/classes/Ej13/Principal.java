@@ -17,7 +17,7 @@ public class Principal {
                 case "1" -> { // Servir cafe
                     int capacidadTaza = readInt(scanner, "Capacidad taza: ");
                     if (capacidadTaza < 0) {
-                        System.out.println("Valor invalido.");
+                        System.out.println("value invalido.");
                         break;
                     }
                     cafetera.serveCup(capacidadTaza);
@@ -26,7 +26,7 @@ public class Principal {
                 case "2" -> { // Agregar cafe
                     int cantidadPorAgregar = readInt(scanner, "Cafe por agregar: ");
                     if (cantidadPorAgregar < 0) {
-                        System.out.println("Valor invalido.");
+                        System.out.println("value invalido.");
                         break;
                     }
                     cafetera.addCoffee(cantidadPorAgregar);
@@ -34,19 +34,20 @@ public class Principal {
 
                 case "3" -> cafetera.fill();
                 case "4" -> cafetera.empty();
-                
+
                 case "5" -> cafetera.setMaxCapacity(
-                    readInt(scanner, "Nueva capacidad: ")
+                        readInt(scanner, "Nueva capacidad: ")
                 );
 
-                 case "6" -> {
-                     System.out.printf(
-                         "Cafe: %d/%d\n\n",
-                         cafetera.getCurrentLevel(),
-                         cafetera.getMaxCapacity());
-                 }
+                case "6" -> {
+                    System.out.printf(
+                            "Cafe: %d/%d\n\n",
+                            cafetera.getCurrentLevel(),
+                            cafetera.getMaxCapacity());
+                }
 
-                 case "7" -> {} // Exit - do nothing
+                case "7" -> {
+                } // Exit - do nothing
 
                 default -> System.out.println("Opcion invalida.");
             }

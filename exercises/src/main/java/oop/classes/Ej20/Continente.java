@@ -1,22 +1,22 @@
 package oop.classes.Ej20;
 
 public class Continente {
-    private final String nombre;
-    private Pais[] paises;
+    private final String name;
+    private final Pais[] paises;
 
-    public Continente(String nombre, Pais[] paises) {
-        this.nombre = nombre;
+    public Continente(String name, Pais[] paises) {
+        this.name = name;
         this.paises = paises;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getname() {
+        return name;
     }
 
     public double obtenerSuperficie() {
         double sum = 0;
         for (Pais p : paises) {
-            sum += p.getSuperficie();
+            sum += p.superficie();
         }
         return sum;
     }
@@ -24,7 +24,7 @@ public class Continente {
     public int obtenerHabitantes() {
         int sum = 0;
         for (Pais p : paises) {
-            sum += p.getHabitantes();
+            sum += p.habitantes();
         }
         return sum;
     }

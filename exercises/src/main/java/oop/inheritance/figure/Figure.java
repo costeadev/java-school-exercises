@@ -1,8 +1,8 @@
 package oop.inheritance.figure;
 
 public abstract class Figure {
-    private String name;
-    private int numOfSides;
+    private final String name;
+    private final int numOfSides;
 
     public Figure(String name, int numOfSides) {
         this.name = name;
@@ -18,5 +18,6 @@ public abstract class Figure {
     }
 
     public abstract double getPerimeter();
+
     public abstract double getArea();
 }

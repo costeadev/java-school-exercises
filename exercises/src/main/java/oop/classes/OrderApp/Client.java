@@ -6,9 +6,9 @@ import java.util.List;
 public class Client {
     private static int NEXT_ID = 1;
 
-    private int id;
-    private String name;
-    private List<Order> orders;
+    private final int id;
+    private final String name;
+    private final List<Order> orders;
 
     public Client(String name) {
         this.id = NEXT_ID++;

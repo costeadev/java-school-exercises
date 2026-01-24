@@ -4,32 +4,32 @@ import java.util.Scanner;
 
 /*
  * Crea un programa que lea por teclado
- * una variable entera para representar 
+ * una variable entera para representar
  * la cantidad de horas trabajadas en una semana.
  * Luego, declara una variable double para representar
- *  la tarifa por hora. 
+ *  la tarifa por hora.
  *  Calcula y muestra el salario semanal.
  */
 
 public class Ex8 {
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-		System.out.println("--- CALCULAR SALARIO SEMANAL ---");
-		
-		System.out.print("Horas trabajadas esta semana: ");
-		int horasTrabajadas = scan.nextInt();
-		
-		System.out.print("Tarifa por hora: ");
-		double tarifaPorHora = scan.nextDouble();
-		
-		double salarioSemanal = calcularSalarioSemanal(horasTrabajadas, tarifaPorHora);
-		System.out.printf("Te corresponden %.2f€ esta semana.", salarioSemanal);
+        System.out.println("--- CALCULAR SALARIO SEMANAL ---");
 
-		scan.close();
-	}
+        System.out.print("Horas trabajadas esta semana: ");
+        int horasTrabajadas = scanner.nextInt();
 
-	public static double calcularSalarioSemanal (int horasTrabajadas, double tarifaPorHora) {
-		return horasTrabajadas * tarifaPorHora;
-	}
+        System.out.print("Tarifa por hora: ");
+        double tarifaPorHora = scanner.nextDouble();
+
+        double salarioSemanal = calcularSalarioSemanal(horasTrabajadas, tarifaPorHora);
+        System.out.printf("Te corresponden %.2f€ esta semana.", salarioSemanal);
+
+        scanner.close();
+    }
+
+    public static double calcularSalarioSemanal(int horasTrabajadas, double tarifaPorHora) {
+        return horasTrabajadas * tarifaPorHora;
+    }
 }

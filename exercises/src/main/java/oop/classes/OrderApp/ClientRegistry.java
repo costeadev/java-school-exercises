@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Objects;
 
 public class ClientRegistry {
-    private static List<Client> clients = new ArrayList<>();
+    private static final List<Client> clients = new ArrayList<>();
 
     public static List<Client> getClients() {
         return clients;

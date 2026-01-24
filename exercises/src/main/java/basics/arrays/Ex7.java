@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /**
  * Leer 5 palabras y guardarlas en un array
- * Indicar si alguna de ellas es un numero entero, tanto positivo como negativo
+ * Indicar si alguna de ellas es un number entero, tanto positivo como negativo
  */
 public class Ex7 {
     public static void main(String[] args) {
@@ -54,6 +54,6 @@ public class Ex7 {
         int notNumberCount = words.length - positiveCount - negativeCount;
         System.out.printf("%nPositivos: %d", positiveCount);
         System.out.printf("%nNegativos: %d", negativeCount);
-        System.out.printf("%nNo-numeros: %d", notNumberCount);
+        System.out.printf("%nNo-numbers: %d", notNumberCount);
     }
 }

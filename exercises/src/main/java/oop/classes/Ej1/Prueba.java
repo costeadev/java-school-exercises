@@ -10,38 +10,38 @@ public class Prueba {
         pepe.despedirse();
 
         // 4.
-        System.out.printf("Nombre: %s%n",pepe.nombre);
-        System.out.printf("Edad: %d%n",pepe.edad);
+        System.out.printf("name: %s%n", pepe.name);
+        System.out.printf("age: %d%n", pepe.age);
         System.out.println();
 
         // 5.
-        pepe.nombre = "Pepe";
-        pepe.edad = 20;
-        System.out.printf("Nombre: %s%n",pepe.nombre);
-        System.out.printf("Edad: %d%n",pepe.edad);
+        pepe.name = "Pepe";
+        pepe.age = 20;
+        System.out.printf("name: %s%n", pepe.name);
+        System.out.printf("age: %d%n", pepe.age);
 
         // 6.
-        pepe.saludar(pepe.nombre, pepe.edad);
+        pepe.saludar(pepe.name, pepe.age);
         pepe.despedirse();
 
         // 7.
         Persona ana = new Persona();
-        ana.nombre = "Ana";
-        ana.edad = 18;
-        pepe.saludar(pepe.nombre, pepe.edad);
-        ana.saludar(ana.nombre, ana.edad);
+        ana.name = "Ana";
+        ana.age = 18;
+        pepe.saludar(pepe.name, pepe.age);
+        ana.saludar(ana.name, ana.age);
 
         // 8. Habria 3 objetos, pero solamente 2 unicos
         Persona aux = pepe;
-        aux.saludar(aux.nombre, aux.edad);
+        aux.saludar(aux.name, aux.age);
 
         // 9. Ahora TODOS SON PEPE
         ana = aux;
-        ana.saludar(ana.nombre, ana.edad);
+        ana.saludar(ana.name, ana.age);
 
         // 10.s
-        ana.nombre = "Ana";
-        ana.edad = 18;
-        ana.saludar(ana.nombre, ana.edad);
+        ana.name = "Ana";
+        ana.age = 18;
+        ana.saludar(ana.name, ana.age);
     }
 }

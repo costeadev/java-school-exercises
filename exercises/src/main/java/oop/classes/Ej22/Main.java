@@ -45,10 +45,10 @@ public class Main {
             switch (eleccion) {
                 case 'a' -> {
                     System.out.println("\n--- INSERTAR CLIENTE ---");
-                    String nombre = Keyboard.readString("Nombre: ");
+                    String name = Keyboard.readString("name: ");
                     String nif = Keyboard.readString("NIF: ");
 
-                    insertarCliente(new Cliente(nombre, nif), clientes);
+                    insertarCliente(new Cliente(name, nif), clientes);
                 }
                 case 'b' -> {
                     System.out.println("\n--- INSERTAR PEDIDO PARA CLIENTE ---");

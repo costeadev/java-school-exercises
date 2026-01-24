@@ -4,13 +4,13 @@ import java.util.Scanner;
 
 public class Principal {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Introduce nombre de titular: ");
-        String titular = scan.nextLine();
+        System.out.print("Introduce name de titular: ");
+        String titular = scanner.nextLine();
 
         System.out.print("Introduce saldo de la cuenta: ");
-        double saldo = scan.nextDouble();
+        double saldo = scanner.nextDouble();
 
         Cuenta cuenta = new Cuenta(titular, saldo);
 
@@ -18,25 +18,25 @@ public class Principal {
         do {
             System.out.println("\n===========================");
             System.out.println("""
-                ### BIENVENIDO A CAJACOSTEA ###
-                1. Ingresar fondos
-                2. Retirar fondos
-                3. Consultar saldo
-                4. Salir
-                """);
+                    ### BIENVENIDO A CAJACOSTEA ###
+                    1. Ingresar fondos
+                    2. Retirar fondos
+                    3. Consultar saldo
+                    4. Salir
+                    """);
 
             System.out.print("Por favor, elige una opcion: ");
-            opcion = scan.nextInt();
+            opcion = scanner.nextInt();
 
             switch (opcion) {
                 case 1 -> {
                     System.out.print("Introduce cantidad a introducir: ");
-                    double cantidad = scan.nextDouble();
+                    double cantidad = scanner.nextDouble();
                     cuenta.ingresar(cantidad);
                 }
                 case 2 -> {
                     System.out.print("Introduce cantidad a retirar: ");
-                    double cantidad = scan.nextDouble();
+                    double cantidad = scanner.nextDouble();
                     cuenta.retirar(cantidad);
                 }
                 case 3 -> {
@@ -52,6 +52,6 @@ public class Principal {
 
         } while (opcion != 4);
 
-        scan.close();
+        scanner.close();
     }
 }

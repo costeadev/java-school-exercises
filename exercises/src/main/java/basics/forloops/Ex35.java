@@ -7,23 +7,23 @@ import java.util.Scanner;
  */
 
 public class Ex35 {
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
-		
-		// Pedir palabra al usuario y eliminar espacios sobrantes y convertir a minusculas
-		System.out.print("Introduce una palabra: ");
-		String word = scan.nextLine().trim().toLowerCase();
-		
-		scan.close();
-		
-		String reversedWord = "";
-		
-		// Recorrer cada letra de la palabra
-		for (int i = word.length() - 1; i >= 0; i--) {
-			reversedWord += word.charAt(i); // Añadir letras al revés
-		}
-		
-		// Comprobar e imprimir si es un palíndomo o no
-		System.out.printf("%s un palíndromo", word.equals(reversedWord) ? "Es" : "No es");
-	}
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Pedir palabra al usuario y eliminar espacios sobrantes y convertir a minusculas
+        System.out.print("Introduce una palabra: ");
+        String word = scanner.nextLine().trim().toLowerCase();
+
+        scanner.close();
+
+        String reversedWord = "";
+
+        // Recorrer cada letra de la palabra
+        for (int i = word.length() - 1; i >= 0; i--) {
+            reversedWord += word.charAt(i); // Añadir letras al revés
+        }
+
+        // Comprobar e imprimir si es un palíndomo o no
+        System.out.printf("%s un palíndromo", word.equals(reversedWord) ? "Es" : "No es");
+    }
 }

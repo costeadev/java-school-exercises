@@ -10,9 +10,9 @@ public class Main {
         };
 
         Trayectoria ruta = new Trayectoria(puntos);
-        Vehiculo coche = new Vehiculo(7.5);
+        Vehiculo Car = new Vehiculo(7.5);
 
-        double gastoTotal = coche.calcularGasto(ruta);
+        double gastoTotal = Car.calcularGasto(ruta);
         double distanciaTotal = ruta.distanciaTotal();
 
         System.out.printf(

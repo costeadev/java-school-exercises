@@ -6,9 +6,9 @@ public class Employee {
     private static int NEXT_ID = 1;
 
     private final int id;
-    private String name;
-    private double salary;
-    private LocalDate hireDate;
+    private final String name;
+    private final double salary;
+    private final LocalDate hireDate;
 
     public Employee(String name, double salary, LocalDate hireDate) {
         this.id = NEXT_ID++;

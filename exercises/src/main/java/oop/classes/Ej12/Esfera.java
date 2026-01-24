@@ -19,6 +19,6 @@ public class Esfera {
     }
 
     public double volumen() {
-        return ((double) 4 /3) * Math.PI * Math.pow(radio, 3);
+        return ((double) 4 / 3) * Math.PI * Math.pow(radio, 3);
     }
 }

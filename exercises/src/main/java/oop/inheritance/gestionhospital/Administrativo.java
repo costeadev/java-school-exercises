@@ -1,10 +1,10 @@
 package oop.inheritance.gestionhospital;
 
 public class Administrativo extends Empleado {
-    private int horasExtra;
+    private final int horasExtra;
 
-    public Administrativo(String nombre, String dni, double salarioBase, int horasExtra) {
-        super(nombre, dni, salarioBase);
+    public Administrativo(String name, String id, double salarioBase, int horasExtra) {
+        super(name, id, salarioBase);
         this.horasExtra = horasExtra;
     }
 

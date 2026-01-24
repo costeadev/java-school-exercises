@@ -1,11 +1,11 @@
 package oop.inheritance.gestionhospital;
 
 public class Enfermero extends Empleado {
-    private Turno turno;
-    private double bonusNoche = 20;
+    private final Turno turno;
+    private final double bonusNoche = 20;
 
-    public Enfermero(String nombre, String dni, double salarioBase, Turno turno) {
-        super(nombre, dni, salarioBase);
+    public Enfermero(String name, String id, double salarioBase, Turno turno) {
+        super(name, id, salarioBase);
         this.turno = turno;
     }
 

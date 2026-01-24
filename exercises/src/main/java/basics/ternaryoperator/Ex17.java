@@ -11,18 +11,18 @@ import java.util.Scanner;
 
 public class Ex17 {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
         System.out.println("--- ES DEMASIADO GRANDE LA SUMA DE 3 NÚMEROS? ---");
 
-        System.out.print("Número 1: ");
-        int num1 = scan.nextInt();
+        System.out.print("number 1: ");
+        int num1 = scanner.nextInt();
 
-        System.out.print("Número 2: ");
-        int num2 = scan.nextInt();
+        System.out.print("number 2: ");
+        int num2 = scanner.nextInt();
 
-        System.out.print("Número 3: ");
-        int num3 = scan.nextInt();
+        System.out.print("number 3: ");
+        int num3 = scanner.nextInt();
 
         int suma = num1 + num2 + num3;
 
@@ -32,6 +32,6 @@ public class Ex17 {
 
         System.out.println(demasiadoGrande);
 
-        scan.close();
+        scanner.close();
     }
 }

@@ -6,7 +6,7 @@ public class Company {
     private static int NEXT_ID = 1;
 
     private final int id;
-    private String name;
+    private final String name;
     private Department[] departments;
 
     public Company(String name) {

@@ -1,7 +1,7 @@
 package oop.classes.Ej11;
 
 public class Cuenta {
-    private String titular;
+    private final String titular;
     private double saldo;
 
     // Constructor
@@ -11,7 +11,9 @@ public class Cuenta {
     }
 
     // Getters
-    public String getTitular() {return titular; }
+    public String getTitular() {
+        return titular;
+    }
 
     public double getSaldo() {
         return saldo;

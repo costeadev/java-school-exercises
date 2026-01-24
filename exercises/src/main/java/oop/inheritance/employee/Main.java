@@ -1,6 +1,7 @@
 package oop.inheritance.employee;
 
 import utils.Keyboard;
+
 import java.time.LocalDate;
 
 public class Main {
@@ -33,7 +34,7 @@ public class Main {
             printMainMenu();
             mainOption = Keyboard.readInt("Choose an option: ");
 
-            switch(mainOption) {
+            switch (mainOption) {
                 case 1 -> showCreateMenu(company);
                 case 2 -> showDeleteMenu(company);
                 case 3 -> showDisplayMenu(company);
@@ -41,7 +42,7 @@ public class Main {
                 default -> System.err.println("Invalid option");
             }
 
-        } while(mainOption != 0);
+        } while (mainOption != 0);
     }
 
     private static void printMainMenu() {
@@ -63,13 +64,13 @@ public class Main {
                     0. Back""");
             createOption = Keyboard.readInt("Choose an option: ");
 
-            switch(createOption) {
+            switch (createOption) {
                 case 1 -> createEmployeeFlow(company);
                 case 2 -> createDepartmentFlow(company);
                 case 0 -> System.out.println("Returning to main menu...");
                 default -> System.err.println("Invalid option");
             }
-        } while(createOption != 0);
+        } while (createOption != 0);
     }
 
     private static void createEmployeeFlow(Company company) {
@@ -98,18 +99,18 @@ public class Main {
         int deleteOption;
         do {
             System.out.println("""
-                \n1. Employee
-                2. Department
-                0. Back""");
+                    \n1. Employee
+                    2. Department
+                    0. Back""");
             deleteOption = Keyboard.readInt("Choose an option: ");
 
-            switch(deleteOption) {
+            switch (deleteOption) {
                 case 1 -> deleteEmployeeFlow(company);
                 case 2 -> deleteDepartmentFlow(company);
                 case 0 -> System.out.println("Returning to main menu...");
                 default -> System.err.println("Invalid option");
             }
-        } while(deleteOption != 0);
+        } while (deleteOption != 0);
     }
 
     private static void deleteEmployeeFlow(Company company) {
@@ -140,14 +141,14 @@ public class Main {
                     """);
             displayOption = Keyboard.readInt("Choose an option: ");
 
-            switch(displayOption) {
+            switch (displayOption) {
                 case 1 -> displayEmployeeFlow(company);
                 case 2 -> displayDepartmentFlow(company);
                 case 3 -> System.out.println(company);
                 case 0 -> System.out.println("Returning to main menu...");
                 default -> System.err.println("Invalid option");
             }
-        } while(displayOption != 0);
+        } while (displayOption != 0);
     }
 
     private static void displayEmployeeFlow(Company company) {

@@ -5,8 +5,8 @@ import java.util.Scanner;
 
 /**
  * Leer por teclado una serie de 6 números.
- * Una vez insertados todos, leer un nuevo número.
- * Indicar cuántos elementos del array son mayores al valor dado.
+ * Una vez insertados todos, leer un nuevo number.
+ * Indicar cuántos elementos del array son mayores al value dado.
  */
 
 public class Ex11 {
@@ -15,11 +15,11 @@ public class Ex11 {
 
         int[] numbers = new int[6];
         for (int i = 0; i < numbers.length; i++) {
-            System.out.printf("Introduce el numero en posicion %d: ", i + 1);
+            System.out.printf("Introduce el number en posicion %d: ", i + 1);
             numbers[i] = scanner.nextInt();
         }
 
-        System.out.printf("%nIntroduce otro numero: ");
+        System.out.printf("%nIntroduce otro number: ");
         int reference = scanner.nextInt();
         scanner.close();
 
@@ -29,6 +29,6 @@ public class Ex11 {
         }
 
         System.out.printf("%nArray original: %s%n", Arrays.toString(numbers));
-        System.out.printf("Hay %d numeros mayores que %d", greaterCount, reference);
+        System.out.printf("Hay %d numbers mayores que %d", greaterCount, reference);
     }
 }

@@ -11,21 +11,21 @@ import java.util.Scanner;
  */
 
 public class Ex18 {
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
-		
-		System.out.print("Se ha aprobado la asignatura 1?: ");
-		boolean asignatura1Aprobada = scan.nextBoolean();
-		
-		System.out.print("Se ha aprobado la asignatura 2?: ");
-		boolean asignatura2Aprobada = scan.nextBoolean();
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-		String resultado = (asignatura1Aprobada && asignatura2Aprobada)
-				? "aprueba el curso"
-				: "repite el curso";
+        System.out.print("Se ha aprobado la asignatura 1?: ");
+        boolean asignatura1Aprobada = scanner.nextBoolean();
 
-		System.out.println("El alumno " + resultado);
+        System.out.print("Se ha aprobado la asignatura 2?: ");
+        boolean asignatura2Aprobada = scanner.nextBoolean();
 
-		scan.close();
-	}
+        String resultado = (asignatura1Aprobada && asignatura2Aprobada)
+                ? "aprueba el curso"
+                : "repite el curso";
+
+        System.out.println("El student " + resultado);
+
+        scanner.close();
+    }
 }

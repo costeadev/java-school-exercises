@@ -3,31 +3,31 @@ package basics.ternaryoperator;
 import java.util.Scanner;
 
 /*
- * Escribe un programa que lea por teclado 
+ * Escribe un programa que lea por teclado
  * dos variables enteras para representar
  *  el ancho y la altura de un rectángulo.
  *  Calcula y muestra el área del rectángulo en pantalla.
  */
 
 public class Ex5 {
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-		System.out.println("--- CALCULAR AREA RECTANGULO ---");
-		
-		System.out.print("Ancho del rectángulo: ");
-		int ancho = scan.nextInt();
-		
-		System.out.print("Alto del rectángulo: ");
-		int alto = scan.nextInt();
-		
-		int area = calcularAreaRectangulo(ancho, alto);
-		System.out.printf("El área del rectángulo es: %d", area);
+        System.out.println("--- CALCULAR AREA RECTANGULO ---");
 
-		scan.close();
-	}
+        System.out.print("Ancho del rectángulo: ");
+        int ancho = scanner.nextInt();
 
-	public static int calcularAreaRectangulo(int ancho, int alto) {
-		return ancho * alto;
-	}
+        System.out.print("Alto del rectángulo: ");
+        int alto = scanner.nextInt();
+
+        int area = calcularAreaRectangulo(ancho, alto);
+        System.out.printf("El área del rectángulo es: %d", area);
+
+        scanner.close();
+    }
+
+    public static int calcularAreaRectangulo(int ancho, int alto) {
+        return ancho * alto;
+    }
 }

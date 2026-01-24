@@ -1,7 +1,7 @@
 package basics.forloops;
 
 /**
- * Programa que dado un número entero lo exprese en el sistema de numeración romano
+ * Programa que dado un number entero lo exprese en el sistema de numeración romano
  */
 
 import java.util.Scanner;
@@ -11,16 +11,16 @@ public class Ex27Corrected {
     public static void main(String[] args) {
 
         // Entrada del usuario
-        Scanner scan = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Introduce un número entero (0-3999): ");
-        int num = scan.nextInt();
+        System.out.print("Introduce un number entero (0-3999): ");
+        int num = scanner.nextInt();
         while (num < 1 || num > 3999) {
-            System.out.println("Número no válido, prueba de nuevo");
-            num = scan.nextInt();
+            System.out.println("number no válido, prueba de nuevo");
+            num = scanner.nextInt();
         }
 
-        scan.close();
+        scanner.close();
 
         /*
          * Esta parte es un poco freestyle, puede sacar los digitos de mil maneras. Aquí algunas:
@@ -36,7 +36,7 @@ public class Ex27Corrected {
         int decenas = (num % 100) / 10;
         int unidades = num % 10;
 
-        // Añadir cada digito en numero romano a romanNum para luego imprimirlo
+        // Añadir cada digito en number romano a romanNum para luego imprimirlo
         String romanNum = "";
 
         // Millares

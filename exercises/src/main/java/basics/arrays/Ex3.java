@@ -11,12 +11,12 @@ public class Ex3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Cuantos numeros quieres leer?: ");
+        System.out.print("Cuantos numbers quieres leer?: ");
         int numbersToRead = scanner.nextInt();
 
         int[] numbers = new int[numbersToRead];
         for (int i = 0; i < numbers.length; i++) {
-            System.out.printf("Introduce el numero en posicion %d: ", i + 1);
+            System.out.printf("Introduce el number en posicion %d: ", i + 1);
             numbers[i] = scanner.nextInt();
         }
 
@@ -39,7 +39,7 @@ public class Ex3 {
             }
         }
 
-        System.out.printf("\nHay %d numeros pares. Su media es: %.2f", evenCount, evenSum / evenCount);
-        System.out.printf("\nHay %d numeros impares. Su media es: %.2f", oddCount, oddSum / oddCount);
+        System.out.printf("\nHay %d numbers pares. Su media es: %.2f", evenCount, evenSum / evenCount);
+        System.out.printf("\nHay %d numbers impares. Su media es: %.2f", oddCount, oddSum / oddCount);
     }
 }

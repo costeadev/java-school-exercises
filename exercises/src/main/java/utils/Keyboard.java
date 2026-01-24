@@ -3,7 +3,7 @@ package utils;
 import java.util.Scanner;
 
 public class Keyboard {
-    private static Scanner sc = new Scanner(System.in);
+    private static final Scanner sc = new Scanner(System.in);
 
     public static int readInt(String prompt) {
         System.out.print(prompt);
@@ -20,7 +20,7 @@ public class Keyboard {
         return sc.nextLine();
     }
 
-    public static boolean readBoolean(String prompt){
+    public static boolean readBoolean(String prompt) {
         System.out.print(prompt);
         return Boolean.parseBoolean(sc.nextLine());
     }

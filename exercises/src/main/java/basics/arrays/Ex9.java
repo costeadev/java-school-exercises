@@ -17,7 +17,7 @@ public class Ex9 {
         // Read first array
         int[] firstArray = new int[arraySize];
         for (int i = 0; i < arraySize; i++) {
-            System.out.printf("Introduce el numero %d del array 1: ", i + 1);
+            System.out.printf("Introduce el number %d del array 1: ", i + 1);
             firstArray[i] = scanner.nextInt();
         }
 
@@ -26,7 +26,7 @@ public class Ex9 {
         // Read second array
         int[] secondArray = new int[arraySize];
         for (int i = 0; i < arraySize; i++) {
-            System.out.printf("Introduce el numero %d del array 2: ", i + 1);
+            System.out.printf("Introduce el number %d del array 2: ", i + 1);
             secondArray[i] = scanner.nextInt();
         }
         scanner.close();

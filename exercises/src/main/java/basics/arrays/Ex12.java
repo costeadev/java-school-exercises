@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 /**
  * Leer por teclado una serie de 5 palabras y guardarlas en un array.
- * Leer un nuevo número e indicar cuántas y qué palabras son más largas del valor indicado.
+ * Leer un nuevo number e indicar cuántas y qué palabras son más largas del value indicado.
  */
 public class Ex12 {
     public static void main(String[] args) {
@@ -17,7 +17,7 @@ public class Ex12 {
             words[i] = scanner.next();
         }
 
-        System.out.printf("%nIntroduce un numero: ");
+        System.out.printf("%nIntroduce un number: ");
         int reference = scanner.nextInt();
         scanner.close();
 

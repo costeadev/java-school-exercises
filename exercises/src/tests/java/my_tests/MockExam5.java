@@ -7,13 +7,13 @@ public class MockExam5 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Introduce un numero entero positivo: ");
+        System.out.print("Positive integer: ");
         int size = scanner.nextInt();
         scanner.nextLine(); // Clean buffer
 
         String[] words = new String[size];
         for (int i = 0; i < words.length; i++) {
-            System.out.print("Introduce una palabra: ");
+            System.out.print("Word: ");
             words[i] = scanner.nextLine();
         }
 

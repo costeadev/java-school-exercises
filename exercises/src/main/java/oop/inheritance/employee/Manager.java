@@ -3,7 +3,7 @@ package oop.inheritance.employee;
 import java.time.LocalDate;
 
 public class Manager extends Employee {
-    private double salaryBonus;
+    private final double salaryBonus;
 
     public Manager(String name, double salary, LocalDate hireDate, double salaryBonus) {
         super(name, salary, hireDate);

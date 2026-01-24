@@ -1,24 +1,24 @@
 package basics.arrays;
 
-import java.util.Scanner;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Ex25NoPlaceholders {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
         // Input
         System.out.print("Cuantas palabras quieres leer?: ");
-        int size = scan.nextInt();
-        scan.nextLine(); // Clear buffer
+        int size = scanner.nextInt();
+        scanner.nextLine(); // Clear buffer
 
         String[] words = new String[size];
         for (int i = 0; i < size; i++) {
             System.out.printf("Introduce la palabra en posicion %d: ", i + 1);
-            words[i] = scan.nextLine();
+            words[i] = scanner.nextLine();
         }
 
-        scan.close();
+        scanner.close();
 
         // Count unique words
         int uniqueCount = 0;

@@ -7,22 +7,22 @@ package basics.ifstatements;
 import java.util.Scanner;
 
 public class Ex6 {
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-		System.out.println("--- ORDENAR 2 NUMEROS DE MENOR A MAYOR ---");
-		
-		System.out.print("Número 1: ");
-		int num1 = scan.nextInt();
-		
-		System.out.print("Número 2: ");
-		int num2 = scan.nextInt();
-		
-		int smallest = (num1 < num2) ? num1 : num2;
-		int biggest = (num1 > num2) ? num1 : num2;
-		
-		System.out.printf("%d %d", smallest, biggest);
+        System.out.println("--- ORDENAR 2 numberS DE MENOR A MAYOR ---");
 
-		scan.close();
-	}
+        System.out.print("number 1: ");
+        int num1 = scanner.nextInt();
+
+        System.out.print("number 2: ");
+        int num2 = scanner.nextInt();
+
+        int smallest = (num1 < num2) ? num1 : num2;
+        int biggest = (num1 > num2) ? num1 : num2;
+
+        System.out.printf("%d %d", smallest, biggest);
+
+        scanner.close();
+    }
 }

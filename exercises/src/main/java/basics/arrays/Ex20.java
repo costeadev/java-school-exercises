@@ -14,14 +14,14 @@ public class Ex20 {
 
         // Ask user to fill array
         int[] numbers = new int[10];
-        System.out.println("--- RELLENAR UN ARRAY DE 10 NUMEROS ---");
+        System.out.println("--- RELLENAR UN ARRAY DE 10 numberS ---");
         for (int i = 0; i < numbers.length; i++) {
-            System.out.printf("Introduce el numero en posicion %d: ", i + 1);
+            System.out.printf("Introduce el number en posicion %d: ", i + 1);
             numbers[i] = scanner.nextInt();
         }
 
         // Ask user to enter a numberToFind
-        System.out.print("Introduce un numero para buscar dentro de ese array: ");
+        System.out.print("Introduce un number para buscar dentro de ese array: ");
         int numberToFind = scanner.nextInt();
 
 

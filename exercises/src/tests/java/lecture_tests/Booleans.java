@@ -3,28 +3,29 @@ package lecture_tests;
 import java.util.Scanner;
 
 public class Booleans {
-	public static void main(String[] args) {
-		
-		// Lectura por teclado
-		Scanner scan = new Scanner(System.in);
-		
-		System.out.print("Dime tu nota: ");
-		int notaExamen = scan.nextInt();
+    public static void main(String[] args) {
 
-		System.out.print("Dime tu nota de la recuperación: ");
-		int notaRecuperacion = scan.nextInt();
-		
-		scan.close();
-		
-		// Está aprobado si la nota es mayor o igual que 5 o la media es mayor o igual que 5
-		boolean estaAprobado = notaExamen >= 5 | (notaExamen + notaRecuperacion)/2 >= 5;
-		
-		// Si está suspenso y no se ha presentado a la recu (-1), se manda aviso
-		boolean avisoNecesario = notaExamen <= 5 && notaRecuperacion == -1; 
+        // Lectura por teclado
+        Scanner scanner = new Scanner(System.in);
 
-		System.out.println((notaExamen + notaRecuperacion)/2);
-		System.out.println("Está aprobado?: " + estaAprobado);
-		System.out.println("Hay que avisar a los papis?: " + avisoNecesario);
-		
-	}
+        System.out.print("Exam mark: ");
+        int examMark = scanner.nextInt();
+
+        System.out.print("Make-up exam mark: ");
+        int makeupMark = scanner.nextInt();
+
+        scanner.close();
+
+        // The student passes if the mark is greater or equal to 5
+        // Or if the average mark is greater or equal to 5
+        boolean passed = examMark >= 5 | (examMark + makeupMark) / 2 >= 5;
+
+        // If the student doesn't pass the exam and doesn't go to the make-up exam (-1). We notice their parents.
+        boolean noticeNeeded = examMark <= 5 && makeupMark == -1;
+
+        System.out.println((examMark + makeupMark) / 2);
+        System.out.println("Has the student passed?: " + passed);
+        System.out.println("Must we notice their papis?: " + noticeNeeded);
+
+    }
 }

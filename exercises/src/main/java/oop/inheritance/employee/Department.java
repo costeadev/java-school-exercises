@@ -7,7 +7,7 @@ public class Department {
     private static int NEXT_ID = 1;
 
     private final int id;
-    private String name;
+    private final String name;
     private Employee[] employees;
 
     public Department(String name) {
@@ -19,9 +19,11 @@ public class Department {
     public int getId() {
         return id;
     }
+
     public String getName() {
         return name;
     }
+
     public Employee[] getEmployees() {
         return employees;
     }

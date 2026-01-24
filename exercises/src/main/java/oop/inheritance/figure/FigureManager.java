@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FigureManager {
-    private List<Figure> figures = new ArrayList<>();
+    private final List<Figure> figures = new ArrayList<>();
 
     public void addFigure(Figure f) {
         if (f != null) {
