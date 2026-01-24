@@ -1,4 +1,4 @@
-package ifs;
+package ifstatements;
 
 /*
  * Realizar un programa que lea dos números y los muestre ordenados de menor a mayor.

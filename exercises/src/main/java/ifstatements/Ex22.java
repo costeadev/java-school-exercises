@@ -1,4 +1,4 @@
-package ifs;
+package ifstatements;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package for_loops;
+package forloops;
 
 /*
  * Concatena dos cadenas de igual longitud de manera alternativa, carácter por carácter.

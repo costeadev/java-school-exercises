@@ -1,4 +1,4 @@
-package ternary_operator;
+package ternaryoperator;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package ifs;
+package ifstatements;
 
 /*
  * Realizar un programa que dado un número entero indique si es o no par. 

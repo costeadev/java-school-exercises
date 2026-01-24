@@ -1,4 +1,4 @@
-package for_loops;
+package forloops;
 
 public class Ex30SideB {
 	public static void main(String[] args) {

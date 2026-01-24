@@ -1,4 +1,4 @@
-package for_loops;
+package forloops;
 
 /**
  * Programa que dado un número entero lo exprese en el sistema de numeración romano

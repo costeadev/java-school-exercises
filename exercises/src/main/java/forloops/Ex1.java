@@ -1,4 +1,4 @@
-package for_loops;
+package forloops;
 
 /*
  * Después de ejecutar el siguiente fragmento de programa

@@ -1,4 +1,4 @@
-package ifs;
+package ifstatements;
 
 /*
  * Realizar un programa que lea un número entero de tres cifras

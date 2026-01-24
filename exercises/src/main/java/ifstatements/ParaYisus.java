@@ -1,4 +1,4 @@
-package ifs;
+package ifstatements;
 
 /* DESCRIPCIÓN:
  * El usuario introduce el día, mes y año de 2 fechas.

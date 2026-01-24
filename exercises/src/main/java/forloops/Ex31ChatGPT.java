@@ -1,4 +1,4 @@
-package for_loops;
+package forloops;
 
 public class Ex31ChatGPT {
     public static void main(String[] args) {

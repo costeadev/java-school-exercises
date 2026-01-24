@@ -1,4 +1,4 @@
-package for_loops;
+package forloops;
 
 /*
  * Programa que muestre por pantalla 

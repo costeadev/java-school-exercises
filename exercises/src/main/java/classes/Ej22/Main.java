@@ -1,6 +1,6 @@
 package classes.Ej22;
 
-import classes.Keyboard;
+import utils.Keyboard;
 
 public class Main {
     public static void main(String[] args) {
