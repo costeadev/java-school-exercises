@@ -84,7 +84,7 @@ public class Main {
         );
 
         Department department = company.findDepartmentById(Keyboard.readInt("Department ID: "));
-        department.createEmployee(name, salary, hireDate);
+
         System.out.println("Employee created!");
     }
 
